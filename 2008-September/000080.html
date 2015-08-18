@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kommende Release 0.7.3
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kommende%20Release%200.7.3&In-Reply-To=%3C20080911072735.GB5291%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000079.html">
+   <LINK REL="Next"  HREF="000082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kommende Release 0.7.3</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kommende%20Release%200.7.3&In-Reply-To=%3C20080911072735.GB5291%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kommende Release 0.7.3">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Sep 11 09:27:36 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000079.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+        <LI>Next message: <A HREF="000082.html">[Netzworkk-kwtools] kommende Release 0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#80">[ date ]</a>
+              <a href="thread.html#80">[ thread ]</a>
+              <a href="subject.html#80">[ subject ]</a>
+              <a href="author.html#80">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+ich teste gerade auf gentoo die kwtools und erweitere sie
+dem entsprechend. Dadurch wurde vieles verbessert, aber was wirklich
+schlimm ist, ist das ich in kwgrub einen schweren Bug gefunden habe.
+
+Beim l&#246;schen eines Men&#252; Eintrags wird alles gel&#246;scht. Ich kann auch
+noch nicht sagen seit wann es den Bug gibt. Er wird aber diese Wo.
+gefixt. Ist ein Syntax Fehler bei &quot;awk&quot;. Sind halt viele {(/\,)}.
+Ich denke mal ich habe irgendwann vor dem speichern noch ein Zeichen
+aus Versehen gel&#246;scht.
+
+kwparted: ist jetzt ein eigenes Paket (i386), weil kwparted nicht alle
+Plattformen unterst&#252;tzt. Paket steht ab Release 0.7.3 zur Verf&#252;gung.
+
+kwnetcardconf: simple WLAN Unterst&#252;tzung. Ich warte immer noch auf
+das neue Ger&#228;t zum testen. DSL kann man immer noch nicht &#252;ber die
+Netzwerk Konfigurations Datei(en) konfigurieren. Andere Dinge wie Vlan
+oder bridge werden auch noch nicht unterst&#252;tzt.
+
+Notiz: Die Gentoo Unterst&#252;tzung f&#252;r verschiedene Netzwerkger&#228;te kann
+etwas dauern, da doch ein bischen anders. Wird aber ein bischen
+durch das Kamerun Projekt (Arbeit) forciert.
+
+kwgrub: Oh je noch ein Fehler:). kwgrub hat keine Root Partition zur
+Auswahl angeboten, wenn alle Partitionen den Type lvm/raid/extended
+haben. Das liegt daran das erst die Festplatten, dann die
+Partitionen der FP. - ohne LVM/RAID - heraus gesucht werden und dann
+durch den Raid-Filter laufen und dann nach Logischen Volumes gesucht
+wird, nochmal gefiltert, und dann zur Auswahl angeboten. K&#246;nnen ja
+verschieden Raid Arrays in anderen Raid Arrays vorhanden und darauf
+Lvm sein, ...
+
+Wenn alle Partitionen als lvm/raid/extend/swap gekennzeichnet sind
+wurde kein Laufwerk gefunden - gefixt.
+
+-------------------------------------------------------------------
+Wie Ihr seht bin ich voll in der Testphase, kurz vor Code-Freeze.
+
+Es gabe ein paar Denkanst&#246;sse f&#252;r kwuser, evtl auch kwgroup.
+In Schulen/Unis und auch anderen Einrichtungen wo viele Menschen nach
+einem bestimmten Zeitraum wechseln, die Einmal Einrichtung zu
+erleichtern. Sprich: kwuser erstellt anhand eines Prefixes, eine
+bestimmte Anzahl User, mit aufsteigender ${Prefix}Zahl, mit Passwort
+${Prefix}Zahl. Nat&#252;rlich wird man nach dem 1. login zum
+&#228;ndern des Passwortes aufgefordert. Wenn man dies nicht tut wird
+autom. wieder ausgeloggt. Soll halt den first Aufwand, bei User
+&lt;10000 &#252;ber /etc/passwd erleichtern, gerade f&#252;r Schulen (kleiner
+Administrations Aufwand) - Ende des Jahre per Script zur&#252;ck setzen,
+einzeln oder alle.
+
+Durch das Kamerun Projekt und LSN (Linux Schulungs Netzwerk) kann
+ich mal wieder ohne Umst&#228;nde auf einem &quot;nackten&quot; System die kwtools
+testen. Man vergisst ja soviel:( und lsb-appchk-shell habe ich auch
+noch nicht gefunden (s. c't 19/08).
+
+Bis auf ein paar Scripte wurde alles korrekt durch getestet.
+Sind noch ein paar Scripte in .../net/ und .../sys/ zu
+testen/anzupassen (gentoo). Gentoo steht aber erst einmal aussen
+vor (f&#252;r mich), da das ein neues lernen verursacht. Erst fertig -&gt;
+dann erweitern. Mach beim testen eh beides:)
+
+Alles im cvs und Doku ist eh schon online.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080911/7a1461fa/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080911/7a1461fa/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000079.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+	<LI>Next message: <A HREF="000082.html">[Netzworkk-kwtools] kommende Release 0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#80">[ date ]</a>
+              <a href="thread.html#80">[ thread ]</a>
+              <a href="subject.html#80">[ subject ]</a>
+              <a href="author.html#80">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

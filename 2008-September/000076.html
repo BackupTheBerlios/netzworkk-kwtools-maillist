@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge, kwparted
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080909160811.GA10452%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000075.html">
+   <LINK REL="Next"  HREF="000078.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge, kwparted</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080909160811.GA10452%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge, kwparted">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Sep  9 18:08:11 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000075.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+        <LI>Next message: <A HREF="000078.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Marcus Franke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">marcus.franke at gmx.net</A>&gt; schrieb am [09.09.08 10:17]:
+&gt;<i> On Tue, Sep 09, 2008 at 02:39:05AM +0200, Kai Wilke wrote:
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Da wir auf Arbeit an einem Project mit der Distribution gentoo f&#252;r
+</I>&gt;<i> &gt; Kamerun schaffen, werde ich die kwtools gleich mal mit gentoo
+</I>&gt;<i> &gt; erweitern.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Oh je, hatte mir heute mal die /etc/conf.d/net.example angeschaut -
+</I>&gt;<i> &gt; ein Grauen - tausende Optionen von modem -&gt; eth -&gt; vlan ....
+</I>
+Ok, der dhcp server auf Arbeit hat nur 5 Eintr&#228;ge.
+&gt;<i> 
+</I>&gt;<i> vlan ist doch so schlimm nicht. Zumindest unter RedHat/Centos
+</I>&gt;<i> brauchst du &quot;nur&quot; ein vlan=yes in die Configs zu schreiben und
+</I>&gt;<i> die Dateien m&#252;ssen vom Syntax her ifcfg-eth0.[1-4095] benannt
+</I>&gt;<i> sein, dann &#252;bernimmt er die .Zahl als vlan ID.
+</I>
+Fedora/Redhat/CentOS/Debian kein Problem, aber Gentoo ist f&#252;r mich
+neu und alle Parameter anders. Sowas wie:
+local_netcard_eth = ( 0, 192.168.0.1/24 )
+ist komplett aus dem Kopf, aber so in der Art.
+
+Auch sonst der Runlevel Mechanismus
+(/etc/runlevel/{boot,default,..}); komplett anders ; kenne sonst
+auch nur /etc/rc?.d/???prog_link --&gt; /etc/init.d/prog
+und halt /etc/init.d/rc?.d/???prog_link... o.s.&#228;..
+
+&gt;<i> 
+</I>&gt;<i> Ausserdem muss der Kernel das 8021q Modul geladen haben.
+</I>&gt;<i> 
+</I>
+Danke mal merken, kann z.Z. kein vlan testen.
+
+&gt;<i> &gt; 
+</I>&gt;<i> &gt; Mal sehen was mich da erwartet. Kernel kompilieren ist sooo schnell,
+</I>&gt;<i> &gt; hatte ich noch nicht gesehen. Dagegen kann mein kompilieren zum
+</I>&gt;<i> &gt; kaffee trinken einladen.
+</I>&gt;<i> 
+</I>&gt;<i> Haha, wunder der modernen Technik, ich erinnere mich, dass auf
+</I>&gt;<i> meinem 486er mit 4MB RAM bei einem 1.2er Kernel das Kompilieren
+</I>&gt;<i> satte 6-7 Stunden gedauert hat :)
+</I>
+:<i>) Ich meinte aber ne alte gentoo Kiste gegen meinen AMD Athlon(tm)
+</I>64 Processor 3500+ (?). Na gut, Gentoo baut mini kernel, nur das
+absolute muss was an Hardware vorhanden ist. Man kann nat. auch
+manuell die Palette erweitern. In diesem Fall wurden alle wlan
+Treiber (nur) built-in eingebunden, dann wurde alles kompiliert und
+installiert (alles auch module). Zeit 2 min?
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080909/f7dbb057/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080909/f7dbb057/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000075.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+	<LI>Next message: <A HREF="000078.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#76">[ date ]</a>
+              <a href="thread.html#76">[ thread ]</a>
+              <a href="subject.html#76">[ subject ]</a>
+              <a href="author.html#76">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

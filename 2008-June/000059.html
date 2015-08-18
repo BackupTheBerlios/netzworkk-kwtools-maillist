@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Status kwquota+kwtools-0.7.2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwquota%2Bkwtools-0.7.2&In-Reply-To=%3C20080627153655.GA30873%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000058.html">
+   <LINK REL="Next"  HREF="000060.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Status kwquota+kwtools-0.7.2</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwquota%2Bkwtools-0.7.2&In-Reply-To=%3C20080627153655.GA30873%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Status kwquota+kwtools-0.7.2">kiste at netzworkk.de
+       </A><BR>
+    <I>Fri Jun 27 17:36:55 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000058.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+        <LI>Next message: <A HREF="000060.html">[Netzworkk-kwtools] Release kwtools-0.7.2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#59">[ date ]</a>
+              <a href="thread.html#59">[ thread ]</a>
+              <a href="subject.html#59">[ subject ]</a>
+              <a href="author.html#59">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+ab Release &quot;quota &gt;=3.15&quot; funktioniert das Script kwquota.
+
+Also kwquota funzt auf folgendenden OS's und FS's:
+Debian/sid/i386 (PC/Laptop): xfs, ext2/3 und reiserfs
+Debian/sid/amd64 (PC): xfs, ext2/3 und reiserfs
+grml &gt;=1.0 sollte auch gehen siehe Debian/sid.
+OpenSuSE/10.3/i386 (PC): xfs, ext2/3 und reiserfs
+Fedora/9/i386 (PC): xfs, ext2/3 und reiserfs.
+CentOS/&lt;=5.2/i386 (PC): funzt noch nicht, zu alte quota Version,
+    manuell schon. Die Option -p gibt es erst seit Release 3.15.
+
+Bis auf Debian-basiert wurden alle Distris unter &quot;vmware-5.5*&quot;
+getestet.
+
+Wie ich gesehen habe sind die warnquota.conf auch unterschiedlich.
+M&#252;ssen halt die Funktionen if_conf_file und if_conf_prog wieder mal
+dran glauben. if_conf_prog ruft denn z. B. bei Debian
+&quot;dpkg-reconfigure quota&quot; auf. Mal sehen.
+
+Laut Changelog soll auch ext4 und MPFS funktionieren. letzteres kenne
+ich aber nicht und JFS unterst&#252;tzen die kwtools noch nicht.
+
+So wenn Montag noch alles funktioniert, kommt Release kwtools-0.7.2
+herraus. Mir l&#228;uft die Zeit ein bischen davon und muss mich auch um
+andere Dinge k&#252;mmern + Arbeit.
+
+Warnquota muss ein bischen warten und braucht noch Recherche.
+
+Gibt aber auch schon wieder andere Probleme. kwrecord kann auf
+einmal keine CDs mehr kopieren, wenn ATA:#,#,# eingestellt ist
+anstelle von ATAPI:.... cdrdao bietet aber keine andere Auswahl
+ausser man hat root Rechte. Alles unter Amd64/Debian/sid, 5 Tage
+alt, aber noch 2.6.18*xen* getestet.
+
+Passt wohl langsam nicht mehr. mein Debian/stable Server kriegt das
+mit dem neuen clamav auch nicht mehr gebacken und ich muss dadurch
+die Datenbank erneuern (postgresql8.1-&gt;8.2, dump her, dump rein).
+Wie gut das man taegliche Backups besitzt;-).
+
+Reicht schon das ich die Certifikate (openssl) auf 15 Rechnern erneuern
+darf:) Was ist bloss los in der IT? Ich m&#246;chte manchmal auch
+schneller als gut, aber ist nicht. Alle machen Fehler das ist Fakt.
+Meine Gedanken sind: seit 2006 - patch nicht ordentlich &#252;berpr&#252;ft.
+
+cvs, html, manpages alles aktuell.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080627/02ed5aab/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080627/02ed5aab/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000058.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+	<LI>Next message: <A HREF="000060.html">[Netzworkk-kwtools] Release kwtools-0.7.2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#59">[ date ]</a>
+              <a href="thread.html#59">[ thread ]</a>
+              <a href="subject.html#59">[ subject ]</a>
+              <a href="author.html#59">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

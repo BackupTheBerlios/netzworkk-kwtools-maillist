@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-December/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20071221235613.GA20521%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000030.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools-0.7.0 Beta Test</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20071221235613.GA20521%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools-0.7.0 Beta Test">kiste at netzworkk.de
+       </A><BR>
+    <I>Sat Dec 22 00:56:13 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000030.html">[Netzworkk-kwtools] Stand der Dinge --&gt; (kwtools-0.7.0)
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#31">[ date ]</a>
+              <a href="thread.html#31">[ thread ]</a>
+              <a href="subject.html#31">[ subject ]</a>
+              <a href="author.html#31">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+Hurra es ist fast geschafft :). Ich weiss es gibt und ich moechte
+noch vieles verbessern, aber es muss jetzt erstmal langen. Es hat
+sich einiges getan. Nicht nur Zsh, so kann anders als cryptsetup
+unter Debian kwcryptsetup mit gnupg umgehen. Ok, langsam!
+
+kwcryptsetup, kann mit ssl und gnupg verschluesselten key.files
+umgehen - welche erstellen, loeschen und vergroessern/verkleinern
+von verschluesselten Laufwerken mit LUKS Erweiterung.
+
+kwlosetup kann leider noch nicht Schluesseldateien
+erstellen/loeschen.
+
+Die kwxen-tools, falls sie so heissen bleiben werden es nicht in die
+Release 0.7.0 schaffen. Es gibt zu viele Ungereimtheiten zwischen
+den deboot/rpmstrap Progs und xen-tools und seinen hooks. Die Option
+--no-hooks funzt nicht (mehr).
+Debian(sid) Installation funzt und ist auch in einer virtuellen
+Maschine konfiguriert und zum Teststart bereit. Ich meine Null
+Ausgangspunkt, kompletter Anfang, Konfiguration wie
+Paketabhaengigkeiten, etc.
+
+Die Funktion count_display_col ist noch nicht ganz ausgereift im
+Umgang mit Arrays. Das Fenster der Partitionsanordnungen von
+kwparted ist dadurch zu klein.
+
+Fast alle Dialogboxen haben jetzt eine variable Fenstergroesse, wie
+es halt gebraucht wird.
+
+Es gibt die neuen Variablen &quot;PAGER&quot; und &quot;EDITOR&quot;, in der
+/etc/kwtools/main.cf.
+PAGER - Pager eurer Wahl (more, less)
+EDITOR - Editor eurer Wahl (vim, emacs, nano) oder &quot;dialog&quot;
+dialog/leer - ist eine Ausnahme; dann wird die Dialogbox &quot;editbox&quot;
+benutzt.
+
+-------------------------------------------------------------------
+Fuer die Tests habe ich bisher nur LiveCDs von CentOS5,
+grml64_0.02, grml_1.0-5 und Fedora8 downloaded.
+
+Fuer Fedora, CentOS und OpenSuSE wird man nur die
+Distriebutionsspezifischen Dinge testen muessen.
+
+OpenSuSE10.3 muss ich noch downloaden, da 10.2 zu alt ist fuer die
+kwtools.
+
+grml ist Debian/sid und wird bis auf amd64 standardmaessig getestet.
+Einzige Ausnahme ist das Init-Runlevel-System. grml benutzt file-rc.
+
+Ich habe jetzt ein Macbook (alt), und nen Mac (?, auch alt) komplett
+zum testen unter Apple. Sach mur mime Type von ISO Images oder die
+Funktion print. Ist mit Drucker und Monitor.
+
+Kann man natuerlich auch anders, aber wenn schon die Packages fuer
+viele Linuxes sein sollen dann sollte man auch auf der Plattform
+testen. Wenn man kann :(
+---------------------------------------------------------------------
+
+Wer schon mal die kwtools testen moechte, denn fuer mich sind sie
+langsam Beta, kann sie aus dem cvs ziehen. Zur Zeit ist immer alles
+aktuell.
+cvs -d
+:<i>pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk login
+</I>cvs -z3
+ -d:pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk co
+ scripts/kwtools
+
+---------------------------------------------------------------------
+Was muss noch unbedingt getan/getestet werden:
+count_display_col (s.o.)
+Mac ISO Images (mime)
+
+Und am besten nochmal systemkrische Scripts.
+
+So das wars erstmal. Ich wuensche euch Frohe Weihnachten und nen
+guten Rutsch ins neue Jahr.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20071222/298d0a95/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20071222/298d0a95/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000030.html">[Netzworkk-kwtools] Stand der Dinge --&gt; (kwtools-0.7.0)
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#31">[ date ]</a>
+              <a href="thread.html#31">[ thread ]</a>
+              <a href="subject.html#31">[ subject ]</a>
+              <a href="author.html#31">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

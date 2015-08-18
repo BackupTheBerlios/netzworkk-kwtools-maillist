@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Neue Release und Fehler mit rsync
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2012-March/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Neue%20Release%20und%20Fehler%20mit%20rsync&In-Reply-To=%3C20120314125607.GA10661%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000130.html">
+   <LINK REL="Next"  HREF="000132.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Neue Release und Fehler mit rsync</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Neue%20Release%20und%20Fehler%20mit%20rsync&In-Reply-To=%3C20120314125607.GA10661%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Neue Release und Fehler mit rsync">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Mar 14 13:56:07 CET 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000130.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-1
+</A></li>
+        <LI>Next message: <A HREF="000132.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#131">[ date ]</a>
+              <a href="thread.html#131">[ thread ]</a>
+              <a href="subject.html#131">[ subject ]</a>
+              <a href="author.html#131">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+ich weiss noch nicht ob ich heute noch die neue Release heraus bringe.
+Ich t&#195;&#188;ftel schon seit Sa./So. nach dem Fehler von rsync und dadurch dem
+Sript kwrsync_backup. Folgendes war fertig getestet.
+
+------------------------------cut-------------------------
+kwrsync_backup (Error) Szenario in K&#195;&#188;rze:
+Fertig mit den Tests &#195;&#188;ber aller Netzwerke, also auch HomeNet und DMZ UND
+gemischten Debian Installationen (squeeze, wheezy/sid, rsync server).
+
+Dann up(d|gr)ade fast aller Rechner und nur noch Fehler. Das werde ich
+noch (heute) weiter ausprobieren/testen - habe aber keine L&#195;&#182;sung mehr im
+Kopf ausser nach Hilfe zu fragen. Genaueres dazu schreibe ich der Debian
+ML.
+
+------------------------------cut-------------------------
+Changelog:
+  * kwauth: Menupoint PAM is static now.
+  * kwuser: new Option - --multi. (kwtools-zshskel - Completion)
+  * kwbackup: deleted.
+  * kwrsync_backup: update documentation.
+  * kwrsync_backup: update and support for rsync daemon.
+  * kwrsync: update and new syntax (kwrsynctab), documentation too.
+  * update script install.
+
+------------------------------cut-------------------------
+Script kwrsync_backup:
+Das Script hat jetzt Support f&#195;&#188;r rsync Server.
+Die &quot;html&quot; Dokumentation zur &quot;ssh&quot; wurde nochmal ausgebessert.
+Ich hoffe sie ist jetzt, trotz K&#195;&#188;rze, verst&#195;&#164;ndlicher. Jedenfalls war
+mein erster Eindruck das sie doch zu schwer, und mit Fehlern behaftet,
+zum durchsteigen in die Materie war.
+
+In den Manpages zu kwrsnc_backup, sie sind echt sehr gewachsen, steht
+alles wissenwertes.
+
+mfg Kai
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120314/38c2e84a/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120314/38c2e84a/attachment.pgp</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000130.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-1
+</A></li>
+	<LI>Next message: <A HREF="000132.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#131">[ date ]</a>
+              <a href="thread.html#131">[ thread ]</a>
+              <a href="subject.html#131">[ subject ]</a>
+              <a href="author.html#131">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

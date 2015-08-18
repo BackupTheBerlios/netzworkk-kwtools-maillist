@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Status kwtools
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwtools&In-Reply-To=%3C20090127211816.GB20290%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000090.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Status kwtools</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwtools&In-Reply-To=%3C20090127211816.GB20290%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Status kwtools">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Jan 27 22:18:16 CET 2009</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000090.html">[Netzworkk-kwtools] Status kwtools
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [08.01.09 01:10]:
+&gt;<i> Hallo Leute,
+</I>&gt;<i> 
+</I>&gt;<i> habe die kwtools &#252;berarbeitet und auch erweitert. Alle Sourcen sind
+</I>&gt;<i> seit heute aktuell, da ca. 90% der Scripts/Funktionen korrekt
+</I>&gt;<i> laufen. Wer also schon mal testen will kann sich die Sourcen von
+</I>&gt;<i> <A HREF="http://">http://</A> downloaden oder halt cvs benutzen.
+</I>
+cvs ist aktuell genauso wie online html Dokumentation.
+
+&gt;<i> 
+</I>&gt;<i> Die Lokalisierung ist auch fast abgeschlossen (kwpostfix noch).
+</I>&gt;<i> 
+</I>&gt;<i> Status:
+</I>&gt;<i> kwpostfix - letzte Script zur &#220;berarbeitung. Aus dem Kopf wurde
+</I>&gt;<i>             glaube ich die Konfiguration der Tabellen
+</I>&gt;<i>             vereinheitlicht (&gt;2.4). Heisst kwpostfix wird auf jeden Fall
+</I>&gt;<i>             schlanker. Wie angesprochen ist das n&#228;chste Script zur
+</I>&gt;<i>             Fertigstellung.
+</I>
+Muss ich noch. Hatte in meiner Krankheit mit kwmutt angefangen. Und?
+Wieder mal mehr Arbeit als man wollte.
+
+&gt;<i> openmosix - Es wird eine Neuauflage und neuen Namen geben. Mosix
+</I>&gt;<i>             (nicht OpenMosix) wird weiter entwickelt und *SuSE hat
+</I>&gt;<i>             es auch im Gep&#228;ck. Das (neue) Script wird dann kwmosix
+</I>&gt;<i>             heissen. Leider gibt es keine Beispiel Konfiguration,
+</I>&gt;<i>             nur das Konfigurationstool. Muss erst einmal einen
+</I>&gt;<i>             Cluster erstellen. Weiss noch nicht wie. Aber vielleicht
+</I>&gt;<i>             im Zuge der Fertigstellung der kwxen-tools. Also Cluster
+</I>&gt;<i>             mit XEN. F&#252;r Kernel 2.4.* wird aber die alte
+</I>&gt;<i>             Konfiguration noch bleiben.
+</I>
+Habe jetzt erst einmal ein Node eingerichtet, damit ich etwas &#252;ber
+/proc/*, der Konfigurationsdateien, und deren tools erfahre.
+
+&gt;<i> kwnetcardconf - Wlan Unterst&#252;tzung ist bisher noch simple. Wird aber
+</I>&gt;<i>                 neben kwpostfix auch in Angriff genommen. Alle Test
+</I>&gt;<i>                 sind abgeschlossen muss nur noch in die Funktionen
+</I>&gt;<i>                 einfliessen. Vielleicht auch ein eigenst&#228;ndiges
+</I>&gt;<i>                 Script.
+</I>
+Noch nicht gemacht (kwmutt, kwmuttprintcf).
+
+&gt;<i> Alle Scripts bis auf ./sys/kwraid kann man getrost benutzen.
+</I>&gt;<i> kwraid muss erst ausf&#252;hrlich getestet werden. Alle anderen habe ich
+</I>&gt;<i> wieder im produktiven Einsatz. Schon allein um Fehler zu finden.
+</I>&gt;<i> 
+</I>&gt;<i> Ein Script f&#252;r mutt (kwmutt) m&#246;chte ich demn&#228;chst auch erstellen.
+</I>&gt;<i> Aber das hat noch Zeit, erst mal das andere. Es soll so weit wie
+</I>&gt;<i> m&#246;glich alles abdecken (SSL, Adressbuch, ...).
+</I>
+Ist im cvs und ist als Alpha zu bezeichnen im Gegensatz zu
+kwmuttprintcf (Stable).
+
+&gt;<i> TODO: Vielleicht gibt es demn&#228;chst f&#252;r jedes Paket oder auch Script
+</I>&gt;<i> eine eigene TODO Datei. Ich finde doch immer wieder Tags wo ich noch
+</I>&gt;<i> was erweitern/berichtigen/hinzuf&#252;gen/... m&#246;chte/wollte.
+</I>
+Bin noch am &#252;berlegen, hm.
+
+&gt;<i> 
+</I>&gt;<i> Im Laufe der Tests und nat. kwpostfix muss ich noch alle
+</I>&gt;<i> unterst&#252;tzten Betriebssysteme updaten und XEN (python) auf AMD 64Bit
+</I>&gt;<i> reparieren. Hauptsache die Lokalisierung wird fertig.
+</I>
+Status: Xen-amd64 l&#228;uft (ohne X :()
+Mosix l&#228;uft (ohne vmware :()
+Alle OSs wurden upgedatet, aber noch nicht getestet.
+
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090127/05c817b7/attachment-0001.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090127/05c817b7/attachment-0001.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000090.html">[Netzworkk-kwtools] Status kwtools
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

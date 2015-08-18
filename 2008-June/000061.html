@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Bug in kwquota
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bug%20in%20kwquota&In-Reply-To=%3C20080629151248.GA6685%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000060.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Bug in kwquota</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bug%20in%20kwquota&In-Reply-To=%3C20080629151248.GA6685%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Bug in kwquota">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Jun 29 17:12:48 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000060.html">[Netzworkk-kwtools] Release kwtools-0.7.2
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#61">[ date ]</a>
+              <a href="thread.html#61">[ thread ]</a>
+              <a href="subject.html#61">[ subject ]</a>
+              <a href="author.html#61">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+jetzt habe ich den Salat. Die quota Optionen {usr,grp,prj}quota
+funktionieren nicht zusammen. Jedenfals nicht in kwquota.
+
+Das ganze funktioniert auch nicht mit Debian/amd64/sid gestern
+upgedatet. Da zeigt quota teilweise meinen UserNamen 3x an, mit
+gleichen benutzten Platz, und auch andere Gruppen/user werden &#246;fters
+angezeigt, teilweise mit sehr unterschiedlichen Belegungen.
+Alles mit quota getestet, nicht kwquota.
+
+Also kwquota funzt auf stable und unstable wenn nur quota oder eins
+der {usr,grp,prj}quota in der /etc/fstab angegeben wird.
+
+Also so schnell wie mein Server (crontab-script) wollte isses denn nun
+doch nicht fertig. Ich muss auf jedenfall was umschreiben um alle
+quotas einlesen und seperat behandeln zu k&#246;nnen. Heisst auch in der
+Konfiguration was &#228;ndern, n&#228;mlich die Auswahl zwischen welcher ID
+die behandelt werden soll.
+
+Beispiel: Gruppe test (ID) und User test (ID) und Project test (ID)
+Da muss ne Auswahl her
+&quot;test User&quot;
+&quot;test Gruppe&quot;
+&quot;test Project&quot;
+
+Und bei Project wirds dann richtig haarig. Da weiss ich noch
+garnichts. Bei gleichzeitigen benutzen von usr- und grpquota wird
+usrquota bevorzugt. Also bei Userlimit von 20Mb und Grouplimit von
+5Mb darf der angegebene User 20MB belegen. Bloss wie ist das mit
+prjquota.
+
+--------------------------------------------------------------------
+Werde ich wohl erst Mitte Juli in Angriff nehmen k&#246;nnen, da doch zu
+gross f&#252;r eine schnelle &#196;nderung. Ferien sind (Tochter v. Ex), ich muss
+arbeiten (staatliche PC Einrichtung - Kotz, Wuerrrggghhhhhh), nat.
+f&#252;rn 1,- EUR. Das ich Freiberufler bin sehen die nicht. Ach man darf
+ja seit neuem Gesetz nicht mal 1 Jahr arbeitslos sein -&gt; Massnahme
+f&#252;r Arbeitsangelegenheiten o.s.. Na ja, nur Steine schmeissen bringt
+auch nichts ;-), Sorry f&#252;r den Sinnesausflug.
+
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080629/e2df85d5/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080629/e2df85d5/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000060.html">[Netzworkk-kwtools] Release kwtools-0.7.2
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#61">[ date ]</a>
+              <a href="thread.html#61">[ thread ]</a>
+              <a href="subject.html#61">[ subject ]</a>
+              <a href="author.html#61">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

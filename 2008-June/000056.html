@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Tests f&#252;r kwquota
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20%3D%3Fiso-8859-1%3Fq%3FTests_f%3DFCr_kwquota%3F%3D&In-Reply-To=%3C20080625020522.GA32135%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000055.html">
+   <LINK REL="Next"  HREF="000057.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Tests f&#252;r kwquota</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20%3D%3Fiso-8859-1%3Fq%3FTests_f%3DFCr_kwquota%3F%3D&In-Reply-To=%3C20080625020522.GA32135%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Tests f&#252;r kwquota">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Jun 25 04:05:22 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000055.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+        <LI>Next message: <A HREF="000057.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [24.06.08 13:40]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [23.06.08 06:49]:
+</I>&gt;<i> &gt; &gt; [...]
+</I>&gt;<i> 
+</I>&gt;<i> Nochmal die Auswahl der Dateisystem konkretisiert.
+</I>
+Noch nicht weiter getestet.
+
+&gt;<i> 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Also auf Debian/i386/unstable (2-3Tage alt) Kernel 2.6.23.9-k7 Vanilla
+</I>&gt;<i> &gt; &gt; geht nur &quot;quota&quot; mit dem Dateisystem &quot;xfs&quot; korrekt.
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Wie schon geschrieben geht unter &quot;ext?&quot; kein Gruppen Quota.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Debian/etch/i386 das selbe in gr&#252;n. Anscheinend wird reiser4
+</I>&gt;<i> &gt; gar nicht unterst&#252;tzt.
+</I>&gt;<i> 
+</I>&gt;<i> Anscheinend werden nur ext2/3, XFS, reiserfs und JFS unterst&#252;tzt.
+</I>&gt;<i> Wobei letzteres noch nicht von den kwtools erschlossen ist.
+</I>&gt;<i> Bei - aus dem Kopf - reiserfs wird bis kernel 2.6.25* noch ein patch
+</I>&gt;<i> ben&#246;tigt.
+</I>&gt;<i> 
+</I>&gt;<i> Alles eine sehr haarige Sache. Z. B. m&#252;ssen die quota und
+</I>&gt;<i> quotatools mit dem kernel kompiliert sein der installiert ist. Also
+</I>&gt;<i> nur Distri-Kernel/Software, ausser bei XFS.
+</I>&gt;<i> 
+</I>&gt;<i> Deswegen funzen wahrscheinlich auch nicht meine Vanilla Kernel + 1/2
+</I>&gt;<i> Patches.
+</I>&gt;<i> 
+</I>&gt;<i> Werde das mal jetzt unter Fedora, CentOS und Opensuse alles Standard
+</I>&gt;<i> testen, wobei ich bei opensuse schon gesehen habe das die kein
+</I>
+Noch nicht getan.
+
+&gt;<i> &gt; &gt; [...]
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; &gt; cvs, manpage, html, Hilfe alles uptodate.
+</I>
+Jo.
+
+&gt;<i> 
+</I>&gt;<i> Habe jetzt heraus gefunden wie man in docbook-xml Sub Sektionen
+</I>&gt;<i> erstellt. Fehlte noch f&#252;r kwnarc.conf.5. Ist aber noch nicht fertig.
+</I>&gt;<i> Noch ca. 200 Zeilen einf&#252;gen/formatieren.
+</I>
+Nach 6 h Nacht Arbeit ist die erste (de) dockbook-xml+xslt erstellte
+kwnarc.conf.5 fertig. Mittlerweile 20Kb gross, schweiss schwitz. Die
+Manpages sehen aber jetzt viel besser aus als noch mit &quot;udo&quot; die
+Manpages zu erstellen.
+
+Kaum doppelte Leerzeichen, URI's werden nicht umgebrochen, bla
+bla.... Ich weiss bloss nicht ob wirklich alles richtig ist. Habe
+zwar viel gelernt, aber XML ist nicht wirklich mein Ding. Das Gute
+ist das ich nur noch die Manpages.1 in XML einarbeiten (Templates)
+muss und nach Fachwissen anpassen (einiges falsch gekennzeichnet).
+
+Na gut gehe jetzt mit den Hund raus und dann ins Bett.
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080625/7922bb65/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080625/7922bb65/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000055.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+	<LI>Next message: <A HREF="000057.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

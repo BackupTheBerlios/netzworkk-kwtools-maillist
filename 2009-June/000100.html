@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools - Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2009-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20090610111745.GA10636%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000101.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools - Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20090610111745.GA10636%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools - Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Jun 10 13:17:45 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000101.html">[Netzworkk-kwtools] kwtools - Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+so habe endlich mal wieder was zu den kwtools zu melden:)
+
+kwmutt: Ist soweit fertig, bis auf die angesprochene &#220;berpr&#252;fung der
+Athorisierungsmethoden der POP/IMAP Server. Was meiner Meinung noch
+fehlt, au&#223;er bestimmten Einstellungsm&#246;glichkeiten, ist das Erstellen von
+Profilen und die Sortierung von *hook Eintr&#228;gen. Steht auf der
+TODO-Liste f&#252;r sp&#228;tere Releases.
+
+kwrip: Lange bei mir in Vergessenheit geraten war die M&#246;glichkeit der
+Auswahl bei mehreren identischen CD-ID's. Ab jetzt kann man bei mehreren
+identischen CD-ID's den Artisten aussuchen und dann entweder ganze CD
+oder nur einzelne Lieder rippen.
+
+kwpostfix: Letztes Script zur Umstellung, heute angefangen - also noch
+nur zum testen und mitwirken geeignet. Das liegt aber an den
+Hauptfunktionen der kwtools, die ja umgestellt worden sind und immer
+noch im &quot;Work in process&quot; stehen. Weiter unten mehr dazu.
+
+kwcryptsetup: Gro&#223;e &#220;berarbeitung und es fehlen noch Tests mit dem
+dazuf&#252;gen von Schl&#252;sseln bzw. l&#246;schen. Ansonsten ist das Script auf dem
+neuesten Stand. Dadurch wurde aber auch die Funktion lo_setup (eine der
+Funktionen die mehrere Scripts nutzen) &#252;berarbeitet.
+
+kwlosetup: nutzt noch nicht alle neuen Features von der Funktion
+lo_setup. Wurde nur angepasst, aber nicht wirklich ver&#228;ndert.
+
+Alle Cypto-Scripts werde ich aber nochmal auf Herz und Nieren testen!
+
+(un)install: Wurden auf den neuesten Stand gebracht.
+Das Script install benutzt jetzt wenns geht das Programm &quot;install&quot;.
+
+=====================Funktionen==========================
+
+Funktionen: Da ich jetzt wieder mehr in den zsh B&#252;chern/Manuals lese
+werden auch bearbeitende Funktionen, neue und gerade &#252;berarbeitende
+Scripts auf den neuesten Wissenstand meinerseits und der der zsh
+gebracht. Dies geht nat. nicht von heute auf morgen, da das doch sehr
+viel Code f&#252;r einen einzelnen ist.
+
+So wird auf Zeit die Funktion prog_exec und dazugeh&#246;rige abgeschafft, da
+diese nur Overhead erzeugen - sie pr&#252;fen bei jeder Befehlausf&#252;hrung ob
+der Befehl vorhanden ist und mehr. Die Fehlerausgabe ist dann auch immer
+lesen sie die Ausgabe des Programms (vereinfacht gesagt). Dies wird
+gerade (langsam) ge&#228;ndert auf &quot;return&quot; Auswertung mit wenn n&#246;tig
+eindeutiger Fehlermeldung.
+
+lo_setup: hat die Option -r f&#252;r remove bekommen und l&#246;scht dadurch,
+wenns geht, das &#252;bergebende loop Device. Desweiteren sucht sie jetzt
+nicht mehr &#252;ber das sys Filesystem nach freien Devices sondern benutzt
+den Befehl &quot;losetup -f&quot;
+
+Die Funktion file_filter ist noch nicht perfekt, da sie teilweise
+rekursiv sucht und bei gro&#223;en Verz. es dann auch dauert.
+
+So im cvs ist bis auf kwpostfix alles aktuell.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090610/df335dfd/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090610/df335dfd/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000101.html">[Netzworkk-kwtools] kwtools - Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#100">[ date ]</a>
+              <a href="thread.html#100">[ thread ]</a>
+              <a href="subject.html#100">[ subject ]</a>
+              <a href="author.html#100">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

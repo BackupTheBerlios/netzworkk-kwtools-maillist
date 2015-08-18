@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools - Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2009-October/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20091006100058.GA4211%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools - Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20091006100058.GA4211%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools - Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Oct  6 12:00:58 CEST 2009</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#103">[ date ]</a>
+              <a href="thread.html#103">[ thread ]</a>
+              <a href="subject.html#103">[ subject ]</a>
+              <a href="author.html#103">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [13.09.09 19:18]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [27.06.09 21:45]:
+</I>&gt;<i> &gt; High, high ...
+</I>&gt;<i> &gt; * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [10.06.09 13:17]:
+</I>&gt;<i> &gt; &gt; Hallo Leute,
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; [...]
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; kwraid: Wird jetzt angefangen damit das Script nicht mehr die
+</I>&gt;<i> &gt; Einstellungen der /etc/mdadm/mdadm.conf &#252;berschreibt, bzw. diese auch
+</I>&gt;<i> &gt; einstellen kann.
+</I>&gt;<i> 
+</I>&gt;<i> kwraid kann jetzt die Datei mdadm.conf konfigurieren. &#220;ber die
+</I>&gt;<i> Konfiguration geht noch keine &#196;nderung der Arrays. Desweiteren kann man
+</I>&gt;<i> immer noch nicht Arrays verg&#246;&#223;ern.
+</I>
+NOTIZ: Noch keine Tests durchgef&#252;hrt.
+
+Arrays kann man jetzt vergr&#246;ssern und auch l&#246;schen. Beim l&#246;schen werden
+auch die Superblocks der einzelnen Partitionen gel&#246;scht.
+
+Konfiguration:
+* Metadaten - Es kamen &quot;ddf&quot; und &quot;imsm&quot; hinzu. 
+* Parity - Es kamen &quot;ddf-*&quot; (DDF kompatible Layouts), &quot;parity-first&quot;
+  und &quot;parity-last&quot; (RAID4-Layout) hinzu. Nat&#252;rlich abh&#228;ngig vom
+  Raidlevel.
+
+Das Hauptmen&#252; hat sich ge&#228;ndert. &quot;raid_hotadd_remove&quot; ist jetzt unter
+dem Men&#252;punkt &quot;Laufwerke&quot; und hei&#223;t jetzt &quot;Partitionswechsel&quot;.
+
+Der Men&#252;punkt Laufwerke --&gt; aendern (RAID5 -&gt; RAID6 und umgedreht) ist
+noch nicht belegt.
+
+&#220;berhaupt sind die meisten Funktionen zu &quot;kwraid&quot; in den Funktionen
+&quot;drive_conf&quot; und &quot;raid_create_conf&quot; geflossen.
+
+&gt;<i> 
+</I>&gt;<i> Es kamen neue Hilfen (z. B. zu Metadaten) und Funktionen hinzu
+</I>&gt;<i> (raid_conf und read_raid_conf).
+</I>&gt;<i> 
+</I>&gt;<i> kwraid wird nur noch, wenn es fertig ist, ab Kernel-2.6.28 und
+</I>&gt;<i> mdadm-3.0 lauff&#228;hig sein.
+</I>&gt;<i> 
+</I>&gt;<i> &gt; TODO: Ist nat&#252;rlich die neuen Kernel-Features zu nutzen, wie raid5 --&gt;
+</I>&gt;<i> &gt; raid6 und umgedreht oder raid's vergr&#246;&#223;ern. Aber das ist _noch_
+</I>&gt;<i> &gt; 2trangig, da einiges doch noch sehr frisch im Kernel ist.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; --------------------------------------------------------------
+</I>&gt;<i> 
+</I>&gt;<i> Viel wurde auch an den Hauptfunktionen im Verzeichnis
+</I>&gt;<i> ../functions/sys ge&#228;ndert bzw. gel&#246;scht (z.B. fhost).
+</I>&gt;<i> ...]
+</I>
+Auch weiter daran gearbeitet bzw. gel&#246;scht.
+
+cvs ist aktuell. Doku, wie geschrieben wird noch nicht hoch geladen.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20091006/b296728c/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20091006/b296728c/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#103">[ date ]</a>
+              <a href="thread.html#103">[ thread ]</a>
+              <a href="subject.html#103">[ subject ]</a>
+              <a href="author.html#103">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

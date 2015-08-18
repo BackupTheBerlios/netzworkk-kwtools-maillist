@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080202225151.GA10669%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000035.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools-0.7.0 Beta Test</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080202225151.GA10669%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools-0.7.0 Beta Test">kiste at netzworkk.de
+       </A><BR>
+    <I>Sat Feb  2 23:51:51 CET 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000035.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#34">[ date ]</a>
+              <a href="thread.html#34">[ thread ]</a>
+              <a href="subject.html#34">[ subject ]</a>
+              <a href="author.html#34">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [29.01.08 02:17]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [10.01.08 04:54]:
+</I>&gt;<i> &gt; High, high ...
+</I>&gt;<i> &gt; &gt; [...]
+</I>&gt;<i> 
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; Wer schon mal die kwtools testen moechte, denn fuer mich sind sie
+</I>&gt;<i> &gt; &gt; langsam Beta, kann sie aus dem cvs ziehen. Zur Zeit ist immer alles
+</I>&gt;<i> &gt; &gt; aktuell.
+</I>&gt;<i> &gt; &gt; cvs -d
+</I>&gt;<i> &gt; &gt; :pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk login
+</I>&gt;<i> &gt; &gt; cvs -z3
+</I>&gt;<i> &gt; &gt;  -d:pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk co
+</I>&gt;<i> &gt; &gt;  scripts/kwtools
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; -----------------------------------------------------------------------
+</I>&gt;<i> &gt; News:
+</I>&gt;<i> &gt; Unter Debian sid i386/amd64 sind fast alle Scripts fertig getestet. Es
+</I>&gt;<i> &gt; fehlen nur noch die Tests mit den Tabellen von kwpostfix und ob kwgrub
+</I>&gt;<i> &gt; mit seperater Boot Partition funktioniert.
+</I>&gt;<i> 
+</I>&gt;<i> kwgrub funzt:)
+</I>&gt;<i> 
+</I>&gt;<i> Einiges muss ich neu testen, da die Funktion &quot;prog_exec&quot; und
+</I>&gt;<i> &quot;prog_failure&quot; geaendert wurden und die Funktion &quot;progress_failure&quot;
+</I>&gt;<i> geloescht wurde (ueberfluessig). Es gab Fehler beim beenden einer
+</I>&gt;<i> dialogbox bei Fehlern von Programmen bei Verwendung der dialogbox
+</I>&gt;<i> &quot;progressbox&quot; und der Funktion &quot;progress_failure&quot;.
+</I>
+Bisherige Tests sind alle gut gelaufen.
+
+&gt;<i> 
+</I>&gt;<i> Noch ein Test einer veraenderten Funktion: convert_drive_size
+</I>&gt;<i> - zeigt ab jetzt die Groesse in n[.,]nnn[TB,GB,MB,KB] an.
+</I>&gt;<i> kwlvm zeigt aber bei 90GByte noch 9nnnnMB an:(
+</I>&gt;<i> Wurde Zeit da dies doch sehr stoert bei 250GByte und mehr grossen
+</I>&gt;<i> FP..
+</I>
+kwlvm zeigt alles korrekt an. Was mir dazu heute einfaellt ist das
+die Funktion number_input eigentlich auch mit der Uebergabe von
+Dezimalzahlen mit Masseinheit umgehen koennen sollte. Bisher gehen
+in fast allen Scripten nur die Uebergabe von integer Zahlen. Also
+bei Laufwerks Groessenangaben geht zur Zeit nur 6G, 6100M aber nicht
+6,1G.
+
+------------------------WICHTIG----------------------------------------
+Das Script kwcryptsetup wurde auf die Option &quot;luksKillSlot&quot;
+upgedatet. Vorher hies die Option &quot;luksDelKey&quot;. In der Manpage zu
+cryptsetup (1.0.6-pre1-1) steht von dieser Option noch nichts.
+------------------------------------------------------------------------
+
+&gt;<i> 
+</I>&gt;<i> Die Funktion count_display_line und count_char_to_line funzen noch
+</I>&gt;<i> nicht richtig miteinander wenn die uebergebene Zeichenkette die
+</I>&gt;<i> Zeichen &quot;\n&quot; enthaelt.
+</I>&gt;<i> 
+</I>&gt;<i> Ansonsten halt noch kwpostfix's Tabellen und die verschiedenen
+</I>&gt;<i> Distries testen. 
+</I>&gt;<i> 
+</I>&gt;<i> Hatte halt auch nebenbei Probleme (FP kaputt auf
+</I>&gt;<i> dem Router) und Arbeit bei Kunden, so das ich nicht soweit kam wie
+</I>&gt;<i> ich wollte.
+</I>
+Noch mehr Fehler: Luefterausfall vom Prozessor (Hauptserver).
+Wer viele Rechner hat braucht kein Auto (Ersatzteile):(.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080202/137db056/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080202/137db056/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000035.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#34">[ date ]</a>
+              <a href="thread.html#34">[ thread ]</a>
+              <a href="subject.html#34">[ subject ]</a>
+              <a href="author.html#34">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

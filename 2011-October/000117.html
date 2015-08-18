@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools - Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2011-October/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20111030135434.GA14792%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools - Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20-%20Stand%20der%20Dinge&In-Reply-To=%3C20111030135434.GA14792%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools - Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Oct 30 14:54:34 CET 2011</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117">[ date ]</a>
+              <a href="thread.html#117">[ thread ]</a>
+              <a href="subject.html#117">[ subject ]</a>
+              <a href="author.html#117">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+die neue Release rueckt immer naeher :). Und es wird doch gleich die
+Nummer 0.8.4. Sollte (auch laut website) erst Nummer 0.8.3-4 werden.
+
+Einiges, wie das importieren beim Script kwssl2, wird noch in die tools
+einfliessen und auch getestet.
+
+Changelog Auszug:
+kwtools (0.8.4-1) unstable; urgency=low
+  * bugfix: kwraid (function raidhotadd_remove).
+  * bugfix: kwlvm (function vg_groups, lv_volumes).
+  * update Scripts (dialog option --default-item), kwlogrotate, kwxmms2.
+  * bugfix: kwpwsafe (function read_pwsafe_data).
+  * bugfix: kwxmms2 (equalizer).
+  * New script kwssl2
+  * bugfix: kwrsync_backup (function kwrsync_backup_exec - format error).
+  * Function: crontbconf new features - @reboot, @daily, ....
+  * Function: if_conf_file and documentation (sys.html) update.
+
+------------------------------cut-----------------------------
+neues Script kwssl2 (kwssl -&gt; kwssl2):
+- RootCA erstellen
+- SubCA erstellen
+- Server Zertifikate erstellen
+- Benutzer Zertifikate erstellen
+- Konfiguration von Benutzer Zertifikaten, Server Zertifikaten, CA und
+  der Gueltigkeit in Tagen von CRLs.
+- exportieren
+- ungueltig erklaeren
+- loeschen
+
+Importieren von CAs oder Zertifikaten geht noch nicht.
+Auch gibts es noch ein Problem bei der Auswahl des Algorithum (DSA oder
+RSA) bei der Erstellung von CAs oder Zertifikaten. Wird naechste Woche
+bereinigt (heute Geburtstagsfeier).
+
+Desweiteren liegt das Script kwssl2 jetzt im Verzeichnis ../utils und
+benoetigt keine Root Rechte mehr.
+
+------------------------------cut-----------------------------
+Websites und cvs sind aktuell.
+
+------------------------------cut-----------------------------
+Der Server msx.mamemu ist demnaechst nicht mehr erreichbar, da er
+abgeschafft wird. Ich werde euch rechtzeitig informieren ueber einen
+sekondaeren Server.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20111030/adbb2fc5/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20111030/adbb2fc5/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117">[ date ]</a>
+              <a href="thread.html#117">[ thread ]</a>
+              <a href="subject.html#117">[ subject ]</a>
+              <a href="author.html#117">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

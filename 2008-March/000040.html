@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools Dokumentation
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20Dokumentation&In-Reply-To=%3C20080316040241.GA5172%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000039.html">
+   <LINK REL="Next"  HREF="000041.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools Dokumentation</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20Dokumentation&In-Reply-To=%3C20080316040241.GA5172%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools Dokumentation">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Mar 16 05:02:41 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000039.html">[Netzworkk-kwtools] letzter Bug entfernt (?)
+</A></li>
+        <LI>Next message: <A HREF="000041.html">[Netzworkk-kwtools] Neue Releases kwtools-0.7.0-0, narc-0.7-6
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#40">[ date ]</a>
+              <a href="thread.html#40">[ thread ]</a>
+              <a href="subject.html#40">[ subject ]</a>
+              <a href="author.html#40">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+Habe gestern zu heute nochmal die Dokumentation zu den kwtools,
+nicht devel, durchgearbeitet.
+
+Nicht nur Rechtschreibung. Ich habe auch einige Seiten erweitert bzw.
+upgedatet. Man findet doch immer wieder was :( und wenns nur
+Vergesslichkeit/&#220;berm&#252;dung bei der Bearbeitung war.
+
+Dadurch wurden auch einige Hilfe Dateien durchgeschaut und ebenso
+ver- und ausgebessert.
+
+Sollte jetzt alles korrekt gehen, da auch einige html Links f&#252;r
+Dienstprogramme (kwvmstat) falsche Ansichtsseiten lieferten bei
+der Benutzung der Navigations Pfeile (ohne Frameset) oder einige
+Seiten &#252;berspringen. Gut; ist nat. Mist mit den falschen Links da
+die Seiten ja schon online waren. No Body is Perfect. Sie gingen
+wenigstens nicht ins Leere.
+
+-----------------------------------------------------------------
+Was muss ich noch tun.
+
+Rechtschreibung weiterpr&#252;fen, letzten Stand von lintian (nicht nur
+kwtools, auch narc) implementieren (debconf interface f&#252;r templates)
+Beim Paket narc fehlt noch das meiste (3) f&#252;r lintian, aber das Paket
+wird ja gerade nicht bearbeitet. Dieses ben&#246;tigt nur das Paket
+kwtools-net-narc.
+
+-----------------------------------------------------------------
+Wer noch Fehler in den Scripts findet bitte einfach an die ML
+oder mir pers&#246;nlich mailen. Ich habe bisher beim pr&#252;fen nur noch son
+Billig Bug von ls beim Script kwholiday bemerkt, wenn keine Dateien
+in ~/.calendar vorhanden sind.
+
+-----------------------------------------------------------------
+In diesem Monat wird das was :)) (1 Jahr Versp&#228;tung:(). Ich habe
+auch bemerkt das ich langsam voll hinter der OpenSource Entwicklung,
+Wissensstand, etc. hinter her hinke.
+
+So benutzen fast alle neuen Distries ifup(was auch immer) und die
+Interface Dateien um DSL zu konfigurieren. Nachteil funzt nicht so
+gut wie mit normalen pppd/Kernel.
+
+Meine Erfahrung: Bei versuchter sofortiger Wiederherstellung der
+DSL-Verbindung (war Debian sarge/etch) &#220;ber die interface Datei 
+&#252;berfordert (*DSL/T-Online,Hansenet,1und1). Also bisher &quot;Back to the
+Roots&quot; :). Habe mich auch nicht weiter drum gek&#252;mmert.
+
+OpenSuSE benutzt zum Beispiel dabei 2 Dateien,
+/etc/sysconfig/network/ifcfg-dsln und   # n - 0 = ppp0 -&gt; dsl0
+/etc/sysconfig/network/provider/provider0  # 1. dsl Interface
+Einstellung (aus dem Kopf, glaube restliche Konfiguration f&#252;r den
+Connect).
+
+Abwarten, auf Dauer wird sich das if* System wohl durchsetzen
+und pppoeconf hat sich erledigt oder entwickelt sich weiter.
+Habe jetzt auch da nicht weiter nachgeschaut. Ist mir auch erstmal
+zu komplex/egal/keine Zeit.
+
+
+mfg Kiste
+
+PS: Falls einem auff&#228;llt das ich wieder versuche mit deutschen
+Sonderzeichen zu schreiben, dem sach ich nur vim&gt;=7.0
+Rechtschreibpr&#252;fung. Wer die Debian ML in letzter Zeit nicht
+verfolgt hat dem schicke ich die Links oder Konfiguration
+(vim/gvim-men&#252;).
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080316/4ca6f2bf/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080316/4ca6f2bf/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000039.html">[Netzworkk-kwtools] letzter Bug entfernt (?)
+</A></li>
+	<LI>Next message: <A HREF="000041.html">[Netzworkk-kwtools] Neue Releases kwtools-0.7.0-0, narc-0.7-6
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#40">[ date ]</a>
+              <a href="thread.html#40">[ thread ]</a>
+              <a href="subject.html#40">[ subject ]</a>
+              <a href="author.html#40">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

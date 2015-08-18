@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Release kwtools-0.6.0-5
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-5&In-Reply-To=%3C20070624152808.GA5064%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Release kwtools-0.6.0-5</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-5&In-Reply-To=%3C20070624152808.GA5064%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Release kwtools-0.6.0-5">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Jun 24 17:28:08 CEST 2007</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+habe am WE die neue Release fertig gestellt.
+
+Neue Variablendefinitionen kamen nicht hinzu. Es wurden einige
+Scripts umbenannt (name --&gt; kwname), vor allem in den Bereichen
+multi und net. Einige Scripts hatten Bugs in der Anzeige von
+Fehlern. So wurde zum Beispiel nicht &quot;Hallo, foo ist nicht da.&quot;
+angezeigt, sondern &quot;Hallo, Achtung ist nicht da.&quot;.
+
+changelog:
+kwtools (0.6.0-5) unstable; urgency=low
+  * the functions resize_fs and mount_check for Debian/sid updated.
+  * Script termin_cron Bug fixed, not removed the directory in ~/tmp
+  * update kwrsync_backup (help, config, man5, html)
+  * rename djbdns and proxy to kwdjbdns and kwproxy (manpage too).
+  * update kwdjbdns (Attention display, help, html)
+
+Nachdem durchsehen von kwdjbdns werde ich die Funktion ccde_conf
+dort einfuehren (ccde = create/change/delete/exit).
+
+Die Doku-Seiten wurden im Bereich &quot;net&quot; ausfuehrlich erweitert (z.B.
+kwdjbdns).
+
+--------------------------------------------------------------------
+Achtung: Wer die Sourcen benutzt sollte immer zuerst das uninstall
+Script der alten Release benutzen, da das neue uninstall Script nat.
+an die neuen Verhaeltnisse angepasst ist.
+--------------------------------------------------------------------
+
+TODO: Weiter die Scripts erweitern, Bugs finden und fixen, neues
+Script kwxen-tools zum managen von Gast-Betriebssystemen unter XEN.
+
+Habe gestern Nacht Xen-amd64 eingerichtet. Als erstes Testsystem
+wurde Debian/sid-amd64 eingerichtet. Die restlichen OS kommen im
+Laufe der Woche hinzu. Die ersten Dinge fuer die kwtools habe ich
+schon festgestellt. So kann, da kein BIOS, das Script kwclock nicht
+die Hardware Uhr einstellen. Also gibts Fehler:(
+
+Vielleicht bin ich ab 01.07 arbeitslos dann habe ich wieder mehr
+Zeit. Dann werde ich mich mal endlich mit den Debianern auseinander-
+setzen.
+
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070624/803fb23c/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070624/803fb23c/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

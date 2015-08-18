@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Release kwtools-0.8.0
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2010-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.8.0&In-Reply-To=%3C20100630211104.GA4180%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000106.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Release kwtools-0.8.0</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.8.0&In-Reply-To=%3C20100630211104.GA4180%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Release kwtools-0.8.0">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Jun 30 23:11:04 CEST 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000106.html">[Netzworkk-kwtools] kwtools Stand
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo allerseits,
+
+meines Erachtens kann man diese Release seit gestern benutzen.
+
+Alle Scripte ben&#195;&#182;tigen nat. (meist) die neuesten Bibliotheken, bzw.
+Kernel etc..
+
+Folgende Scripte kamen hinzu und haben meist bei schwierigen Kriterien
+eine Vorauswahl. Einige Scripte (z.B. Verschl&#195;&#188;sselung) setzen nat.
+Grundwissen vorraus.
+
+- kwecryptfs - Frontend f&#195;&#188;r die Dateiweise Verschl&#195;&#188;sselung ganzer
+  Verzeichnisse.
+- kwmutt - Frontend zur Konfiguration und arbeiten mit dem Mailclienten
+  &quot;Mutt&quot;
+- kwmuttprintcf - Frontend zur Konfiguration zum drucken einiger
+  Mailclients, wie &quot;Mutt&quot; oder anderen.
+- kwpwsafe - Frontend f&#195;&#188;r die auch per Konsole bedienbare Software
+  &quot;pwsafe&quot; zum managen von Passw&#195;&#182;rtern.
+- kwpasswd - Frontend zum &#195;&#164;ndern von Benutzer Passw&#195;&#182;rtern. Unterst&#195;&#188;tzt
+  das &#195;&#164;ndern &#195;&#188;ber die Programme &quot;passwd&quot; (lokal) und &quot;yppaswd&quot; (NIS).
+- kwauth - Frontend zur Einstellung der Benutzer Authentifizierung am
+  System. Unterst&#195;&#188;tzt zur Zeit &quot;PAM&quot;, &quot;LDAP&quot; und &quot;NIS&quot;.
+
+Script kwraid (das letzte im Testalltag):
+Soweit ich wei&#195;&#159; ist Kernel 2.32.5 der letzte wirklich stable, weshalb
+auch das &#195;&#164;ndern der Raidlevel erst einmal nicht weiter verfolgt wurde
+(s. auch vorherige mail). Linus - Code-Fehler - hat sich eh in den
+letzten Wochen dazu ge&#195;&#164;u&#195;&#159;ert das er das anders (Schnauze voll?)
+angehen will/tut. OK.
+
+Es kann jetzt Raid Arrays mit den Leveln 1/4/5/6 vergr&#195;&#182;ssern und
+verkleinern, hei&#195;&#159;t ein Laufwerk kommt hinzu oder wird entfernt.
+Dies ist unabh&#195;&#164;ngig vom verwendeten Dateisystem, welches auf dem Array
+liegt (muss von den kwtools unterst&#195;&#188;tzt werden).
+
+Wenn ein per cryptsetup erstelltes Laufwerk auf dem Array sich befindet
+wird man aufgefordert das Script kwcryptsetup zu benutzen. Dies
+bewerkstelligt fast dasselbe (Raid-Laufwerk entfernen/vergr....).
+
+Bei LVM sieht es etwas anders aus. Das Script kwlvm entfernt keine Raid-
+Laufwerke wenn es LVM-Laufwerke verkleinert/vergr&#195;&#182;ssert.
+
+Das Script kwraid kann keine Raid-Laufwerke entfernen/dazuf&#195;&#188;gen, wenn
+dadrauf ein LVM liegt.
+
+Notiz: Man sollte Rechner/Netzwerk-Installationen planen (f&#195;&#188;r min.
+2 Jahre?) ;-)
+
+--------------------------cut----------------------------
+Changelog:
+  * neue Scripte kwauth, kwecryptfs, kwmutt,
+    kwmuttprintcf, kwpwsafe, firstlogin und kwpasswd.
+  * Scripts/Funktionen: alle zurueck|back, speichern|save,
+    ... wurden mit den jeweiligen Variablen ersetzt ($gv_Back,
+    $gv_....)
+  * neue Option fuer die Function mount_check: -c - checkt ob
+    Laufwerk eingebunden ist oder nicht.
+  * neue Option fuer die Function count_display_line: -f - fuer
+  	die Dialogbox mixedform.
+  * kwnarcconf: ALLOW_* Eingabe Nachrichten gefixet.
+  * kwtermin: sortiert Termin Datei.
+  * kwcal-tex: Auswahlmenue fuer Ferien/Geburtstage die im Kalender
+    erscheinen sollen.
+  * neue Funktionen set_filetype, filetype, user_group_passwd,
+    dd_gauge, update_nis, mixed_password und mixedform.
+  * kwquota: Bug in der Auswahl gefixet.
+  * kwtools zsh Optionen sind neu konfiguriert worden und weniger.
+  * Updates der (un)install Scripts.
+  * kwpostfix: update auf die kwtools Funktionen.
+  * kwrsync: benutzt jetzt auch den rsync Daemon.
+  * Function rsh_ssh wurde umbenannt nach remote_sh.
+  * Funktionen fhost, no_group_msg, no_user_msg, search_packages
+    geloescht.
+  * manpages: wurden angepasst.
+  * kwraid: Konfiguration (mdadm.conf) erstellt.
+  * kwlvm: kann mit verschluesselten Laufwerken (cryptsetup) umgehen
+    und unterstuetzt UUID und LABEL Angaben.
+  * kwcryptsetup: unterstuetzt UUID und LABEL Angaben.
+  * kwuser: hat eine Konfiguration bekommen und Support fuer QUOTA.
+  * kwauth: ist neu and hat Support fuer PAM, LDAP und
+    NIS-Authentifikation.
+  * kwrunlevconf: Support fuer openrc (Gentoo) gestrichen.
+  * kwnetconf: Support fuer die Programme gprsconnect und modemlink
+    entfernt.
+  * kwrecord: Unterstuetzung fuer die Anzahl der Kopien, genisoimage
+    Optionen, etc.
+  * Scripte kwfilm2film, openmosix und kwvdvdburn entfernt.
+
+und vieles mehr.......
+
+
+Hat auch lange genug gedauert. :(
+
+--------------------------cut----------------------------
+
+Ihr findet/downloadet/installiert die kwtools wie gehabt von den
+Servern, wie beschrieben auf&#194;&#185;.
+
+
+[1] <A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A> -&gt; Download
+
+
+mfg Kiste, der M&#195;&#188;de ist und doch noch arbeiten mu&#195;&#159;, heul.
+
+PS: Die Sourcen sind wohl erst Morgen auf Berlios zu finden. Die
+restlichen http/ftp-server sind aktuell. Habe Hunger und s. o..
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20100630/dd863153/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20100630/dd863153/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000106.html">[Netzworkk-kwtools] kwtools Stand
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

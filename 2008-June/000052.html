@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] werdende kwtools-0.7.2-0
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20werdende%20kwtools-0.7.2-0&In-Reply-To=%3C20080617161407.GA11617%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000051.html">
+   <LINK REL="Next"  HREF="000053.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] werdende kwtools-0.7.2-0</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20werdende%20kwtools-0.7.2-0&In-Reply-To=%3C20080617161407.GA11617%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] werdende kwtools-0.7.2-0">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Jun 17 18:14:07 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000051.html">[Netzworkk-kwtools] werdende kwtools-0.7.2-0
+</A></li>
+        <LI>Next message: <A HREF="000053.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [15.06.08 17:43]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [14.06.08 14:14]:
+</I>&gt;<i> &gt; High, high ...
+</I>&gt;<i> &gt; * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [10.06.08 18:44]:
+</I>&gt;<i> &gt; &gt; High Leute,
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; habe mit dem Script kwquota angefangen. Es unterst&#252;tzt auch das XFS
+</I>&gt;<i> &gt; &gt; Dateisystem. Als tools werden quotatool, xfs_quota und repquota
+</I>&gt;<i> &gt; &gt; genutzt. Ein/Ausschalten/Dump/restore von Quota ist noch nicht
+</I>&gt;<i> &gt; &gt; implementiert. 
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; immer noch nicht, zu viel Stress.
+</I>
+Neue Struktur von kwquota:
+Ansicht
+Konfiguration
+    anlegen
+    aendern
+    loeschen
+Laufwerke - hier ist noch nichts.
+beenden
+
+Es unterst&#252;tzt jetzt zwar keine Blocks mehr aber daf&#252;r
+Speichergr&#246;ssen bis PetaBytes. Muss ich allerdings noch mit ext?
+Dateisystemen testen.
+
+Desweiteren werden jetzt alle Eingaben &#252;berpr&#252;ft. Z. B. das das
+Softlimit immer &lt;= dem Hardlimit sein muss. Die Programme unter
+Debian/i386 unstable bringen manchmal keinen Fehlercode und dann hat
+man auf einmal als Block Softlimit 16E anstelle 100M.
+
+&gt;<i> Mit Dateisystem &quot;XFS&quot; geht alles, auch Projekte.
+</I>
+immer noch. Das Dateisystem mag ich eh :).
+
+&gt;<i> Unter &quot;ext2/3&quot; geht kein grpquota, aber usrquota geht normal.
+</I>
+immer noch
+
+&gt;<i> Noch keine weiteren Dateisysteme die die kwtools unterst&#252;tzen
+</I>&gt;<i> getestet. Also noch kein &quot;NTFS/FAT*&quot; (geht das &#252;berhaupt) und
+</I>&gt;<i> &quot;reiserfs*&quot;. L&#228;uft auf Debian/unstable stabil, Fehler bei grpquota
+</I>&gt;<i> und quotatool werden eh angezeigt.
+</I>
+reiser4, reiserfs, vfat, msdos, ntfs gehen nicht auf Debian/i386
+unstable - System 2 Tage uptodate.
+Das einzige was geht ist die Ansicht der quota Tabelle, jedenfalls
+unter reiser*.
+
+&gt;<i> &gt; [...]
+</I>&gt;<i> &gt; Mal sehen wie mein cvs aussieht, vielleicht (oder besser is) kommen
+</I>&gt;<i> &gt; die *xml Dateien mit ins Repository.
+</I>&gt;<i> 
+</I>&gt;<i> cvs ist uptodate. xml Dateien sind noch nicht drin.
+</I>
+cvs/Hilfe zu kwquota ist uptodate.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080617/26ee5d9b/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080617/26ee5d9b/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000051.html">[Netzworkk-kwtools] werdende kwtools-0.7.2-0
+</A></li>
+	<LI>Next message: <A HREF="000053.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#52">[ date ]</a>
+              <a href="thread.html#52">[ thread ]</a>
+              <a href="subject.html#52">[ subject ]</a>
+              <a href="author.html#52">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

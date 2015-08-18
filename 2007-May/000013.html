@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Release kwtools-0.6.0-4
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-May/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-4&In-Reply-To=%3C20070517210512.GA30713%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Release kwtools-0.6.0-4</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-4&In-Reply-To=%3C20070517210512.GA30713%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Release kwtools-0.6.0-4">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu May 17 23:05:12 CEST 2007</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+habe vor ein paar Tagen die Release kwtools-0.6.0-4 erstellt. Sorry
+das diese Nachricht ein paar Tage gedauert hat. Zu viel Stress und
+Arbeit:(
+
+So was ist passiert. Die Funktionen lvm_version and os_check
+wurden upgedated.
+
+lvm_version: Benutzt jetzt das Programm lvm um die Version von lvm
+herrauszubekommen.
+
+os_check: Wurde an die neue Namensgebung von Debian sid (lenny/sid)
+erweitert.
+
+-----------------------------------------------------------------------
+Bugs in Debian/sid amd64
+Ich habe letzte Woche ein update gemacht, seitdem gehen die kwtools
+nicht mehr auf diesem System.
+
+Leider scheint die zsh auch Probleme zu machen, muss ich aber erst
+nachlesen (Bugreports). Habe gerade Release 4.3.4-2.
+
+Jedenfalls funktioniert dialog nicht richtig.
+
+Nur unter Debian amd64 sid getestet.
+
+-----------------------------------------------------------------------
+Probleme mit den kwtools
+Mika vom grml Team hat folgendes geschrieben. Ich zietier mal ein
+bischen: Es gibt teilweise massive Probleme, wo die Skripts
+bzw. die zsh mit tonnenweise rt_sigprocmask-Syscalls nicht sichtbar,
+sondern nur via strace feststellbar, ablaufen.
+
+Mika - kannst du mir mal deine strace Optione senden? Ich habe
+voelligen anderen Output, auch mit Fehlern, aber weniger
+mit rt_sigprocmask. Mein strace (Debian/sid i386) macht sogar
+verschiedene Outputs zw. Konsole und Output in eine Datei schreiben.
+
+strace Version ist 4.5.14-2.
+
+Unter den anderen OS habe ich das ganze noch nicht getestet.
+
+-----------------------------------------------------------------------
+Downloads: Am besten von server.mamemu da Berlios Probleme bereitet,
+wieder mal.
+deb <A HREF="ftp://server.mamemu.de/pub/kwtools/Debian/stable/">ftp://server.mamemu.de/pub/kwtools/Debian/stable/</A> ./
+deb-src <A HREF="ftp://server.mamemu.de/pub/kwtools/Debian/stable/">ftp://server.mamemu.de/pub/kwtools/Debian/stable/</A> ./
+Ansonsten lest unter dem Menuepunkt Download von
+<A HREF="http://netzworkk.berlios.de/">http://netzworkk.berlios.de/</A> nach.
+
+-----------------------------------------------------------------------
+
+Html ist aktuell, cvs versuche ich noch heute, schaffe ich aber
+glaube ich nicht mehr. Spaet und habe noch mehr zu tun.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070517/2f396c8a/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070517/2f396c8a/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#13">[ date ]</a>
+              <a href="thread.html#13">[ thread ]</a>
+              <a href="subject.html#13">[ subject ]</a>
+              <a href="author.html#13">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

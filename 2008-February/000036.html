@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080228002352.GB13074%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000035.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools-0.7.0 Beta Test</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080228002352.GB13074%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools-0.7.0 Beta Test">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Feb 28 01:23:52 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000035.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [12.02.08 16:28]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [02.02.08 23:51]:
+</I>&gt;<i> In kwgrub wurde die Unterstuetzung fuer Fedoras /boot/grub/grub.conf
+</I>
+Unter Fedora8 heisst sie jetzt auch ganz normal menu.lst :), aber
+anderes Format :(
+
+&gt;<i> Es stehen nur noch Pruefungen mit allen Distries ausser Debian an. Bei
+</I>&gt;<i> Fedora LiveCD bin ich neulich fast verzweifelt. Uebers Netzwerk und das
+</I>
+Habe jetzt bis auf CentOS alle in eine VMware installiert. OpenSuSE
+laedt erst alle Pakete in den RAM und Swap bevor es diese in das
+Zielsystem installiert. Das steht nat. nirgendwo. Auch wieder 1 Tag
+gekostet.
+
+&gt;<i> YottaBytes werden noch nicht unterstuetzt da die shell ab der 18
+</I>&gt;<i> Stelle die Zahlen abschneidet und nicht mehr rechnet.
+</I>&gt;<i> 1YB=1180591620717411303424 KB
+</I>&gt;<i> if [[ &quot;$SIZE&quot; -ge 1180591620717411303424 ]] ; then ...
+</I>&gt;<i> 
+</I>&gt;<i> Vielleicht weiss du da was Matthi. Ist aber noch nicht so wichtig
+</I>
+Sach aber trotzdem demnaechst mal was dazu. Bitte, ich habe keine
+Zeit.
+
+&gt;<i> 
+</I>&gt;<i> Ein grosses Problem habe ich aber noch mit gettext und den
+</I>&gt;<i> functions/sys/* Dateien. Einiges wird einfach ausgelassen bei der
+</I>&gt;<i> Erstellung der *.po Dateien. Irgendwo muessen bestimmt noch
+</I>&gt;<i> Sonderzeichen sein (' oder so, Umlaute habe ich ueberprueft).
+</I>
+immer noch.
+
+Debian i386/amd64, OpenSuSE10.3+dialog20071028, Fedora8 fast (2 Bugs)
+sind durchgetestet. Redhat wurde gestrichen, CentOS &gt;=5 muss ich
+noch. Es gab noch ein paar Bugs fuer *SuSE und Fedora in einigen
+Scripts bzw Funktionen. Z.B. benutzt *Suse die pwdutils und nicht
+das Source Paket shadow zur Userverwaltung.
+
+Beschreibung pwdutils:
+print passwdgeheim | passwd --stdin User
+Dafuer kein newusers Befehl
+shadow Paket:
+in den passwd Befehl kann nicht gepipt werden.
+Dafuer aber passwdgeheim in einer Datei mit newusers.
+
+Diesen Monat wird die Vertigstellung leider nichts mehr.
+
+mfg Kiste, der sich schon auf grml 1.1 freut, nach den ersten
+Danksagungen in der ML:). Morgen oder so.
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080228/03546ba7/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080228/03546ba7/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000035.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#36">[ date ]</a>
+              <a href="thread.html#36">[ thread ]</a>
+              <a href="subject.html#36">[ subject ]</a>
+              <a href="author.html#36">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

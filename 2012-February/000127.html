@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand Script kwssl2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2012-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20Script%20kwssl2&In-Reply-To=%3C20120206181226.GB7755%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000126.html">
+   <LINK REL="Next"  HREF="000128.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand Script kwssl2</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20Script%20kwssl2&In-Reply-To=%3C20120206181226.GB7755%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand Script kwssl2">kiste at netzworkk.de
+       </A><BR>
+    <I>Mon Feb  6 19:12:26 CET 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000126.html">[Netzworkk-kwtools] Script kwquota
+</A></li>
+        <LI>Next message: <A HREF="000128.html">[Netzworkk-kwtools] ANNOUNCE kwtools Release 0.8.4-2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [25.01.12 19:42]:
+&gt;<i> Moin Leute,
+</I>&gt;<i> 
+</I>&gt;<i> Vieles wurde umgeschrieben, in Funktionsdateien ausgelagert,
+</I>&gt;<i> vereinfacht, etc.. Und das wird bestimmt noch viele Verbesserungen
+</I>&gt;<i> geben, wie Code Verkleinerung oder bei der Performance. Mal sehen was
+</I>
+der Code wurde verkleinert und verbessert und wird noch. Es werden jetzt
+auch keine Passw&#195;&#182;rter mehr an openssl &#195;&#188;berreicht sondern Umgebungs
+Variablen. Dieses dient dazu damit Programme wie ps und Co diese nicht
+anzeigen k&#195;&#182;nnen.
+1 Feature fehlt noch, siehe weiter unten.
+
+&gt;<i> das Auge oder Ihr so findet, oder Vorschl&#195;&#164;ge zur Verbesserung.
+</I>&gt;<i> 
+</I>&gt;<i> Ausf&#195;&#188;hrliche bzw. endg&#195;&#188;ltige Tests fehlen noch. Wird ja auch noch
+</I>&gt;<i> weiter entwickelt. Aber vielleicht mag ja einer die neuen Features
+</I>&gt;<i> testen. Unter dem Link&#194;&#185; steht wie ihr das git Repository zum testen
+</I>&gt;<i> runterladen k&#195;&#182;nnt.
+</I>&gt;<i> 
+</I>&gt;<i> ----------------------------------cut-------------------------------
+</I>&gt;<i> Folgendes Features sollten gehen:
+</I>&gt;<i> - Erstellung/Verwaltung von CAs, SubCAs, Server- und
+</I>&gt;<i>   Benutzer-Zertifikaten
+</I>&gt;<i> - Verwaltung von Zertifikaten, Schluesseln (export, Ansicht, etc.)
+</I>&gt;<i> - import, loeschen, Ansicht von Anforderungen (Cerificate Request)
+</I>&gt;<i> - Widerrufsliste exportieren
+</I>&gt;<i> - Diffie Hellman Dateien erstellen
+</I>&gt;<i> - import von (nur) CAs
+</I>
+- erstellen von Anforderungen und signieren
+- export von CA Ketten (cachain)
+
+&gt;<i> Folgendes Features gehen noch nicht:
+</I>&gt;<i> - beim importieren einer CA auch die Schluessel, Zertifikate und
+</I>&gt;<i>   Anforderungen zu importieren bzw. zu ber&#195;&#188;cksichtigen
+</I>&gt;<i>   Bsp. ../CANAME/index.txt etc.
+</I>&gt;<i>   Geht nur der Import einer CA, z. Z.
+</I>&gt;<i> 
+</I>----------------------------------cut-------------------------------
+git ist aktuell:
+&gt;<i> 
+</I>&gt;<i> [1] <A HREF="http://netzworkk.berlios.de/download/git.html">http://netzworkk.berlios.de/download/git.html</A>
+</I>
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120206/c9ffd85d/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120206/c9ffd85d/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000126.html">[Netzworkk-kwtools] Script kwquota
+</A></li>
+	<LI>Next message: <A HREF="000128.html">[Netzworkk-kwtools] ANNOUNCE kwtools Release 0.8.4-2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

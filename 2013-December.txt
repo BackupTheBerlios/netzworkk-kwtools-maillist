@@ -1,0 +1,85 @@
+From kiste at netzworkk.de  Thu Dec  5 21:06:57 2013
+From: kiste at netzworkk.de (Kai Wilke)
+Date: Thu, 5 Dec 2013 21:06:57 +0100
+Subject: [Netzworkk-kwtools] (fwd) Announce kwtools Release 0.8.5-5
+	[kiste@netzworkk.de]
+Message-ID: <20131205200657.GA8711@suffbook.netzworkk.de>
+
+Hallo,
+
+gerade wohl die E-Mail falsch verschickt. Mhm.
+
+----- Forwarded message from Kai Wilke <kiste at netzworkk.de> -----
+
+Date: Thu, 5 Dec 2013 16:43:01 +0100
+From: Kai Wilke <kiste at netzworkk.de>
+To: Marcus Franke <marcus.franke at gmx.net>, Martin Mewes <martin at mewes.tv>, Jan-Martin Stuewe
+	<jan-martin.stuewe at luenecom.de>, Helmut Ruhnau <helmutruhnau at freenet.de>, Karim
+	<Sirdom at poppen.de>
+Subject: Announce kwtools Release 0.8.5-5
+Bcc: Matthias Kopfermann <matthias at kopfermann.org>
+Reply-To: kwtools <netzworkk-kwtools at berlios.de>
+X-Mailer: Mutt http://www.mutt.org
+X-Editor: VIM - Vi IMproved 7.4.52, http://www.vim.org
+User-Agent: Mutt/1.5.21 (2010-09-15)
+
+Hi Leute,
+
+die letzte Release f??r wheezy ist fertig. Es wurde haupts??chlich an der
+Beseitigung von Fehlern und Verbesserungen gearbeitet.
+
+Beim Script kwvcdburn wurde die Unterst??tzung f??r Photo-CDs gel??scht.
+
+Das Dateisystem JFS kann man jetzt mittels den Sripts kwlvm und kwraid
+vergr??ssern.
+
+Die dialogbox "progressbox" wurde in die Funktionen format,
+floppy_format, resizefs und dem Script kwlvm implementiert.
+
+Rest steht im changelog.
+
+PS: In der Funktion ./functions/sys/sys_conf Zeile 3986 gab es nach der
+Erstellung der Release noch einen Fehler. Irgendwann hatte sich der
+Fehler - update-rc.d-insserv - anstelle von - update-rc.d eingeschlichen (?).
+
+Repository Codename Jessie: Wegen letzter Release f??r wheezy zu jessie
+oder sid sind einige gr??ssere ??nderungen (sysv-rc; update-rc.d)
+vorhanden, weshalb die neuen Releases erst einmal nur f??r jessie und sid
+geschrieben werden. F??r wheezy gibt es also keine neuen Releases mehr.
+
+Installation siehe:
+http://www.netzworkk.org/download/pakete.html
+
+Viel Spass, Kai
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   http://grml.org
+kiste at netzworkk.de
+http://www.netzworkk.org
+http://www.netzworkk.de
+http://netzworkk.berlios.de
+
+
+
+
+----- End forwarded message -----
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   http://grml.org
+kiste at netzworkk.de
+http://www.netzworkk.org
+http://www.netzworkk.de
+http://netzworkk.berlios.de
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: <https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20131205/00c3e770/attachment.pgp>
+

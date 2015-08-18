@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Kwtools+Konsolodierung
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-September/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Kwtools%2BKonsolodierung&In-Reply-To=%3C20070904233603.GA12408%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000020.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Kwtools+Konsolodierung</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Kwtools%2BKonsolodierung&In-Reply-To=%3C20070904233603.GA12408%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Kwtools+Konsolodierung">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Sep  5 01:36:03 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000020.html">[Netzworkk-kwtools] Kwtools+Konsolodierung
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+die kwtools brauchen fuer die release &gt;0.6.5 etwas. Zu gross ist
+die Umstellung. Viele Funktionen sind vereinigt worden oder muessen
+noch sortiert und geregelt eingefuegt werden.
+
+Die Doku (cvs/html/berlios) ist auch noch nicht fertig. Nur die Site
+ueber fs_conf (html/Doku) ist anscheinend fertig.
+
+changelog Auszug (vielleicht eher fuer 0.7.0):
+kwtools (0.6.0-6) unstable; urgency=low
+  * many new functions
+  * all system functions merged to script_init, sys_conf, fs_conf,
+    hw_conf, multi_conf, net_conf, bootloader_conf (?) und
+    sys_logger (?).
+  * new Script kwxen-tools (Alpha).
+  * po file from kwtools-common extended.
+  * Script raid renamed to kwraid and have gauge for create and
+    raidhot_add_remove.
+  * Script kwrsync - new help.
+  * Script runlevconf renamed to kwrunlevconf.
+  * Script gpgcrypt renamed to kwgpgcrypt.
+  * Script planer renamed to kwplaner.
+  * Scripts termin* renamed to kwtermin*.
+  * Script kwtermin_cron - Bug fixed in display from mail.
+  * kwgrub has support for module, savedefault and lock.
+  * kwrecord/cd_dvd_burn has support for mkisofs options.
+  * kwcamera has gauge support. display Bug fixed.
+  * function gauge has support for variable display size.
+  * new function count_char_to_line.
+
+kwxen-tools ist nich nicht fertig.
+
+TODO:
+In den kwraid wird der Support fuer die raidtools noch gestrichen.
+    vielleicht auch spaeter ist erstmal nicht so wichtig.
+Unterstuetzung fuer die Anzeige der Bilder (kwcamera,....) im
+    Framebuffer (auch noch nicht so wichtig).
+kwpostfix erweitern/aendern sowieso (staendig).
+Funktion ccde_conf in den Scripts/Funktionen weiter einbauen.
+count_char_to_line in den Scripts/Funktionen weiter einbauen
+    (Berechnung der Anzeigezeilen einiger dialogboxen).
+po-Dateien aktualisieren.
+kwxen-tools fertigstellen.
+
+Na ja wird schon, hier ist gerade ziemlich viel Stress.:(
+Hund, Menschen putt. :(
+
+Es wird ab jetzt kein devel-Baum mehr geben. Entweder die Testwochen
+reichen aus um zu min. 90% stable zu werden oder wir sind alle zu
+bloed.
+
+cvs ist aktuell ;-) - macht was, kein Scherz will fertig werden.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070905/a238e8ab/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070905/a238e8ab/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000020.html">[Netzworkk-kwtools] Kwtools+Konsolodierung
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

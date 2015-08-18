@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools Stand
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2010-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20Stand&In-Reply-To=%3C20100615095945.GA29596%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools Stand</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools%20Stand&In-Reply-To=%3C20100615095945.GA29596%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools Stand">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Jun 15 11:59:46 CEST 2010</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000107.html">[Netzworkk-kwtools] Release kwtools-0.8.0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [26.05.10 12:54]:
+&gt;<i> Hallo allerseits,
+</I>
+Sorry, falls es bei euch evtl. falsch aussieht. Stelle gerade alles auf
+UTF-8 um. Schreibt sich echt bloed im Vim+Mutt+remote auf unstable,
+deshalb auch lieber das Vermeiden deutscher Umlaute.
+
+&gt;<i> habe am WE mit den Tests zu kwraid angefangen. Das ist das letzte Script
+</I>&gt;<i> zum testen, bzw. dadurch auch nochmal eine kleine Ver&#228;nderung in
+</I>&gt;<i> kwcryptsetup (vergr&#246;ssern/verkleinern von verschl. RAID-Arrays).
+</I>
+Es wurden nicht nur in diesem Zusammenhang auch einige andere Scripte
+upgedatet (kwgrub, kwrsync, kwlvm, kwcryptsetup,...)
+
+&gt;<i> Was funktioniert:
+</I>&gt;<i> Alle Tests mit Raid1/4/5/6 verg&#246;ssern bzw. verkleinern funktioniert mit
+</I>&gt;<i> den Dateisystemen ext2/3.
+</I>
+Alle von den kwtools unterstuetzten Dateisysteme funktionieren und auch
+RAID+Dateisystem, RAID+Crypto+Dateisystem - vergroessern wie
+verkleinern. LVM versteht sich.
+
+Kwraid: kann noch kein PV (LVM) anpassen. Muss noch.
+
+kwcryptsetup: Beim verkleinern/vergroessern eines Laufwerks (kein
+Container) und es liegt auf einem RAID, wird automatisch das
+Crypto-Dateisystem gestoppt - das RAID behandelt - Dateisystem behandelt
+- und anschliessend wieder gestartet.
+
+&gt;<i> Ver&#228;ndern der RAID-Level funktioniert noch nicht (Bsp.: RAID1-&gt;RAID6).
+</I>
+Ist zwar als Menuepunkt vorhanden, aber nicht einsetzbar (Nachricht).
+Zur Zeit gibt es unter Kernel-2.6.34 mit VMware und mdadm-3.3.1 zu
+viele Fehler:
+Segmantation fault, core dump, ....
+
+&gt;<i> Den Code, zum vergr&#246;ssern/verkleinern, werde ich heute noch auf die
+</I>&gt;<i> anderen unterst&#252;tzten Dateisysteme integrieren und ausd&#252;nnen.
+</I> 
+Es steht nur noch der Test mit den neuesten grml-Live-CD, Fedora, CentOS
+und OpenSuSE an. Nach &quot;hoffentlich&quot; erfolgreichen Tests wird es wohl
+Ende diesen Monats endlich die Release kwtools-0.8 geben, Puh,
+Schweiss, Schwitz...:)
+
+Bearbete heute eigtl. nur die Doku (html) zu den neuen RAID-Funktionen
+die in die Funktionen fs_conf und hw_conf geflossen sind. Diese stehen
+wahrscheinlich (Arbeit) heute Abend zur Verfuegung.
+
+Ansonsten ist alles aktuell.
+
+mfg Kiste, und viel Spass beim ausprobieren
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20100615/15188d49/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20100615/15188d49/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000107.html">[Netzworkk-kwtools] Release kwtools-0.8.0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

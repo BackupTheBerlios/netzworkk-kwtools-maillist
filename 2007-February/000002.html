@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070205082649.GA22719%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000003.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070205082649.GA22719%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Mon Feb  5 09:26:49 CET 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000003.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [31.01.07 02:07]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [28.01.07 12:53]:
+</I>&gt;<i> &gt; High Leute,
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Der Stand ist:
+</I>&gt;<i> &gt; CentOS-4.4 - geht alles (Fluechtigkeitsfehler ausgemerzt)
+</I>&gt;<i> &gt; grml-0.9 - geht alles
+</I>&gt;<i> &gt; Debian-4.0 - geht alles
+</I>&gt;<i> &gt; OpenSuSe-10.2 - geht bisher alles (fuer *SuSE kwclock verbessert)
+</I>&gt;<i> &gt;     parted von *SuSe hat ein Komma Problem (Flag - boot, , , ,....)
+</I>&gt;<i> &gt; Fedora-6 - ? (noch garnicht getestet)
+</I>
+Musste die Funktionen if_conf_{file,prog} und os_check um Fedora
+erweitern. Unterscheidet sich doch einiges zu CentOS oder auch dem
+alten RedHat.
+
+24h habe ich fuer die Installation von Fedora6 benoetigt - grausam.
+Letztendlich musste ich nen Rechner opfern, virtuell ging garnichts
+(vmware 32Bit). Selbst beim Rechner musste ich &quot;linux text&quot;
+eingeben.
+
+-----------------------------------------------------------------
+An Mika
+
+VMware-5.5.3* geht nicht fuer Debian amd64, laut support.html und
+Selbsttest. Ubuntu-10*, RedHat Enterprises, SuSe.... 32 und 64 Bit
+angeblich schon.
+
+Xen habe ich noch nicht ausprobiert. Ich schreibe dazu aber dann
+noch was (Hallo Maddi:)).
+------------------------------------------------------------------
+
+Habe noch nicht alles getestet (Fedora6). Mache nebenbei dist-upgrades
+auf alten Rechnern (i386, P1, &lt;=3D64MB):).
+&gt;<i> &gt; 
+</I>&gt;<i> &gt; In allen Distris wurde nicht das Erstellen von DVD's getestet,
+</I>&gt;<i> 
+</I>&gt;<i> Noch nicht getan.
+</I>&gt;<i> 
+</I>
+aktuell.
+
+&gt;<i> &gt; 
+</I>&gt;<i> &gt; Wahrscheinlich werde ich am Script film2film noch was aendern, damit
+</I>&gt;<i> &gt; man auch ohne Angabe des Video_Import filters Filme umwandeln kann.
+</I>&gt;<i> 
+</I>&gt;<i> Noch nicht getan.
+</I>&gt;<i> 
+</I>
+aktuell.
+
+&gt;<i> &gt; 
+</I>&gt;<i> &gt; -------------------------------------------------------------------
+</I>&gt;<i> &gt; Vielleicht fuehre ich in &gt;=0.6.0 ein neues Konzept, fuer das Menue
+</I>&gt;<i> &gt; anlegen/aendern/loeschen, ein. Es werden dann je nach Auswahl die
+</I>&gt;<i> &gt; Variablen CREATE/CHANGE/DELETE dementsprechend belegt. Es gibt dann
+</I>&gt;<i> &gt; ...]
+</I>&gt;<i> 
+</I>&gt;<i> Bin schon am testen. kwrsync nutzt dieses als erstes. Ich werde wohl
+</I>&gt;<i> auch noch ne Doku (Policy) schreiben, wie die Funktions Namen bzw.
+</I>&gt;<i> die globalen Variablen heissen muessen/sollten. Aber wohl erst nach
+</I>&gt;<i> Release 0.6.0.
+</I>
+Ist aber noch nicht ausgereift (Konzept). Meine erste globale Var.
+war gv_Auswahl und ist eig. ueberall vorhanden. Vielleicht werden
+dann auch die oberen globalen Var. eher gv_Delete/gv_Change etc.
+heissen.
+
+Testen, testen (Fedora6):((. DVD-Erstellung muss auch noch. Fedora
+hat auch system-config-cluster und ich glaube auch lvm2-cluster.
+Nicht nur letzteres ist nat. interressant. Mal beide anschauen.
+
+Warum ist Fedora wieder so anders, nicht viel, aber wozu haben wir
+lsb etc..
+
+html Sites sind uptodate - Fedora6 kam hinzu, Support fuer RedHat
+ &gt;=9.0 ist nur noch optional. Eigentlich ist RedHat =9.0 Ende.
+Der Rest wurde upgedatet.
+
+News sind auch uptodate.
+
+-----------------------------------------------------------------
+Zum Schluss mal ne Frage: Macht es noch Sinn an dialog festzuhalten?
+Immerhin ist das Teil auch schon in Sid 1 Jahr alt.
+
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070205/ad6c6314/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070205/ad6c6314/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000003.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

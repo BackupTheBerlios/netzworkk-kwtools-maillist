@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Release kwtools-0.6.0-1
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-April/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-1&In-Reply-To=%3C20070403205649.GA4148%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000010.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Release kwtools-0.6.0-1</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Release%20kwtools-0.6.0-1&In-Reply-To=%3C20070403205649.GA4148%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Release kwtools-0.6.0-1">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Apr  3 22:56:50 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000010.html">[Netzworkk-kwtools] Bug in Release kwtools-0.6.0-0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+gegenueber der 0.6.0-0 er Release hat sich ne Menge getan.
+Vor allem im Multimedia Bereich. So kann kwrecord neue Funktionen
+zum brennen, snd2sndfm die en(de)coder Optionen einstellen.
+Die Funktion cd_dvd_burn kann jetzt Dateien brennen die mehr als
+2 Leerzeichen in Folge besitzen. Lag wie schon mal behauptet an
+mkisofs. kwrecord kopiert nun mit und ohne temporaeren Verz. CDs und
+DVDs. Beim CD kopieren kann man eine CDDB abfragen.
+kwgrub unterstuetzt nun die Parameter &quot;hiddenmenu&quot; und &quot;splashimage&quot;.
+
+changelog:
+kwtools (0.6.0-1) unstable; urgency=low
+  * function kwrsync_backup_exec - display for mails (cron - subject) updated.
+  * function script_backtitle - year updated.
+  * functions if_conf_file, kwgrub_conf for grub extended.
+    (hiddenmenu and splashimage).
+  * manpages from kwgrub.8, kwrecord.1, snd2sndfmrc.5, snd2sndfm.1
+    and cd_dvdrc.5 updated.
+  * function cd_dvd_burn add CDDB Support (only Option --cdcopy),
+    on-the-fly and tmp directory.
+  * function cd_driver supported flags for cdrdao driver.
+  * function kwrecord_conf supported configuration from a tmp directory,
+    CDDB and the Option on-the-fly.
+  * snd2sndfm can configure the decode and encode options.
+  * functions mount_check and resize_fs added readlink for devices.
+  * docs, help, updated.
+  * function file_filter for MP3 updated.
+  * Bugs fixed and BUGS file updated (cd_dvd_burn+mkisofs).
+
+ -- Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt;  Tue, 03 Apr 2007 17:25:12 +0100
+
+Download siehe:
+<A HREF="http://netzworkk.berlios.de/download/ftp.html">http://netzworkk.berlios.de/download/ftp.html</A>
+<A HREF="http://netzworkk.berlios.de/download/pakete.html">http://netzworkk.berlios.de/download/pakete.html</A>
+
+----------------------------------------------------------------------
+Es wurde angefangen die Scripte zu vereinheitlichen. So gibt es
+bereits einige definierte Variablen. Bis auf das die Variablen in
+den Scripten/Funktionen existieren gibts noch keine Doku dazu.
+
+Variablendeklaration der kwtools:
+
+---------------------------------------------------
+Globale Variablen in jeglicher Hinsicht:
+
+gv_ScriptName - Name des Scripts
+
+gv_Auswahl - Rueckgabewerte von dialogs Menueboxen
+gv_ChangeValue - yes/no
+gv_CreateValue - yes/no
+gv_DeleteValue - yes/no
+
+Uebersetzungs-Variablen:
+gv_Attention - Achtung/Attention
+gv_Back - abbrechen/back
+gv_Change - aendern/change
+gv_Configuration - Konfiguration/Configuration
+gv_Create - anlegen/create
+gv_Delete - loeschen/delete
+gv_Exit - beenden/exit
+gv_Info - Info
+gv_Mainmenu - Hauptmenue/Mainmenu
+gv_Save - speichern/save
+
+gv_Menupoint - Waehlen Sie bitten einen Menuepunkt aus.
+
+---------------------------------------------------
+Lokale Variablen:
+
+---------------------------------------------------
+Globale Variablen in Funktionen:
+*TITLE - Titel der dialogbox (Bsp.: TITLE/TYP_TITLE)
+*MSG - Nachricht der dialogbox (Bsp.: MSG/TYP_MSG)
+*MENU - Werte die die dialogbox zur Auswahl anzeigen soll
+(Bsp.: MENU/TYP_MENU)
+
+---------------------------------------------------
+Lokale Variablen in Funktionen:
+Bsp. Schreibweise: Anz, Tmp, ...
+
+mehr ist noch nicht.
+
+----------------------------------------------------------------------
+Die HTML Seiten wurden fuer die bearbeiteten Scripts und Funktionen
+verbessert, ausgebessert und erweitert. Das cvs ist auch aktuell.
+
+mfg kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070403/09bbb09c/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070403/09bbb09c/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000010.html">[Netzworkk-kwtools] Bug in Release kwtools-0.6.0-0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9">[ date ]</a>
+              <a href="thread.html#9">[ thread ]</a>
+              <a href="subject.html#9">[ subject ]</a>
+              <a href="author.html#9">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

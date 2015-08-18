@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Fortschritt bei kwtools
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-July/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Fortschritt%20bei%20kwtools&In-Reply-To=%3C20070701060615.GA6499%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000016.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Fortschritt bei kwtools</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Fortschritt%20bei%20kwtools&In-Reply-To=%3C20070701060615.GA6499%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Fortschritt bei kwtools">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Jul  1 08:06:15 CEST 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000016.html">[Netzworkk-kwtools] Fortschritt bei kwtools
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15">[ date ]</a>
+              <a href="thread.html#15">[ thread ]</a>
+              <a href="subject.html#15">[ subject ]</a>
+              <a href="author.html#15">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+die kwtools sind weiter in der Konsolidierung. So wurde jetzt das
+Script raid zu kwraid umbenannt und hat einen Fortschrittsbalken
+bekommen. Jedenfalls beim entfernen einer FP/Partition oder erstellen
+eines neuen RAID Arrays.
+
+Die Funktionen net_conf und sys_conf wurden creiert. 2. ist noch in
+Entwicklung. Die Funktion net_conf konfiguriert Proxy (http/ftp),
+IP-Adresse, Rechnername, Gateway, Netmask, Broadcast, Dhcp, ob beim
+booten schon das Netzwerk starten soll und Nameserver. Die meisten
+Funktionen in net_conf fangen mit &quot;iface_*&quot; an. Die Funktion
+sys_conf ist noch stark in Entwicklung, na ja die Funktionen werden
+da rein kopiert und per autoload in den verschiedenen Scripts
+geladen. Muessen halt alle betroffenen Scripts angepasst werden.
+
+Neue globale Variablen sind dadurch auch dazugekommen:
+# Funktion net_conf
+gv_Boot
+gv_Broadcast
+gv_Dhcp
+gv_Gateway
+gv_Ip
+gv_Nameserver
+gv_Netmask
+gv_Hostname
+gv_Http_Proxy
+gv_Ftp_Proxy
+
+# sys_conf (wird noch mehr;-) )
+gv_Initrd
+gv_Vmlinuz
+
+Policy habe ich zur Entwicklung noch nicht geschrieben:(, aber ich
+habe ja jetzt wieder mehr Zeit. Arbeitslosigkeit ist seit gestern
+offiziell. Gut Behoerdengaenge, aber das wird schon nicht soviel
+Zeit beanspruchen - bin ja Frueaufsteher:)
+
+cvs ist aktuell, die Doku und Hilfe zu den kwxen-tools muss ich noch
+schreiben, iss eh noch nich fertich:)). Scheint aber gross zu
+werden. Vielleicht nicht ganz so gross wie kwpostfix, aber mal sehen
+was man alles beachten muss. xen-create-image hat schon viele
+Optionen, wo ich erstmal 3 weggelassen habe (--role*). Das Gute ist
+das die xen-*-* fast einheitliche Optionen/Parameter besitzen.
+
+Wer die kwxen-tools ausprobieren will kann sie ja aus dem cvs
+ziehen.
+cvs -d :pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk
+  login
+cvs -z3 -d:pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk
+  co scripts/kwtools
+Alles eine Zeile ab bis &quot;cvs&quot;.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070701/b03ceab4/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070701/b03ceab4/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000016.html">[Netzworkk-kwtools] Fortschritt bei kwtools
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#15">[ date ]</a>
+              <a href="thread.html#15">[ thread ]</a>
+              <a href="subject.html#15">[ subject ]</a>
+              <a href="author.html#15">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

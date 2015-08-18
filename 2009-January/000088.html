@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Status kwtools
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2009-January/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwtools&In-Reply-To=%3C20090108001048.GA6926%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000090.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Status kwtools</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kwtools&In-Reply-To=%3C20090108001048.GA6926%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Status kwtools">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Jan  8 01:10:48 CET 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000090.html">[Netzworkk-kwtools] Status kwtools
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+habe die kwtools &#252;berarbeitet und auch erweitert. Alle Sourcen sind
+seit heute aktuell, da ca. 90% der Scripts/Funktionen korrekt
+laufen. Wer also schon mal testen will kann sich die Sourcen von
+<A HREF="http://">http://</A> downloaden oder halt cvs benutzen.
+
+Die Lokalisierung ist auch fast abgeschlossen (kwpostfix noch).
+
+Status:
+kwpostfix - letzte Script zur &#220;berarbeitung. Aus dem Kopf wurde
+            glaube ich die Konfiguration der Tabellen
+            vereinheitlicht (&gt;2.4). Heisst kwpostfix wird auf jeden Fall
+            schlanker. Wie angesprochen ist das n&#228;chste Script zur
+            Fertigstellung.
+
+kwtex-cal - Auswahlmen&#252; f&#252;r Ferien/Geburtstage die im Kalender
+            erscheinen sollen kam hinzu. Man kann also mehr oder
+            weniger den Kalender personalisieren (Bsp. Geschenk).
+
+openmosix - Es wird eine Neuauflage und neuen Namen geben. Mosix
+            (nicht OpenMosix) wird weiter entwickelt und *SuSE hat
+            es auch im Gep&#228;ck. Das (neue) Script wird dann kwmosix
+            heissen. Leider gibt es keine Beispiel Konfiguration,
+            nur das Konfigurationstool. Muss erst einmal einen
+            Cluster erstellen. Weiss noch nicht wie. Aber vielleicht
+            im Zuge der Fertigstellung der kwxen-tools. Also Cluster
+            mit XEN. F&#252;r Kernel 2.4.* wird aber die alte
+            Konfiguration noch bleiben.
+
+kwtermin - sortiert jetzt nach dem Speichern/&#228;ndern die Daten. Und
+           zwar nach dem Betreff Text.
+
+kwecryptfs - Ein Script zur Datei weisen Verschluessellung von
+             Verzeichnissen in dem ein virtuelles Dateisystem &#252;ber
+             ein bestehendes Verzeichnis gelegt wird. Dabei wird die
+             Krypto-API des Kernels benutzt. Lest die Hilfe/Manpage
+             zum Script da ich nicht alles testen kann und auch
+             die ecryptfs-utils noch nicht alles unterst&#252;tzen
+             (gnupg). Die Schl&#252;sseltypen passphrase und openssl
+             funktionieren auf jeden Fall. 
+
+kwnetcardconf - Wlan Unterst&#252;tzung ist bisher noch simple. Wird aber
+                neben kwpostfix auch in Angriff genommen. Alle Test
+                sind abgeschlossen muss nur noch in die Funktionen
+                einfliessen. Vielleicht auch ein eigenst&#228;ndiges
+                Script.
+
+kwnarcconf - ALLOW_* Eingabe Nachrichten gefixet. &#220;berlegung ob man
+             noch eine Kindersicherung (Ex-Frau+Kind) einbauen soll.
+             Obwohl ich gegen jede Art von Unterdr&#252;ckung bin.
+             Halt per Cron-Job verschiedene Regeln starten.
+
+######################################################################
+Die Funktionen set_filetype und filetype sind hinzu gekommen.
+set_filetype - spezifiert die Dateitypen die von der Funktion
+               file_filter benutzt werden sollen.
+filetype - beinhaltet alle bisher benutzten Dateitypen inclusive all.
+
+Neue Option f&#252;r die Funktion mount_check.
+mount_check -c - checkt ob das Verzeichnis/Partition eingebunden ist
+oder nicht.
+
+######################################################################
+
+setopt shwordsplit wurde soweit es erforderlich war entfernt.
+
+######################################################################
+
+Alle Scripts bis auf ./sys/kwraid kann man getrost benutzen.
+kwraid muss erst ausf&#252;hrlich getestet werden. Alle anderen habe ich
+wieder im produktiven Einsatz. Schon allein um Fehler zu finden.
+
+Ein Script f&#252;r mutt (kwmutt) m&#246;chte ich demn&#228;chst auch erstellen.
+Aber das hat noch Zeit, erst mal das andere. Es soll so weit wie
+m&#246;glich alles abdecken (SSL, Adressbuch, ...).
+
+Auch muss ich meine TODO Liste im Auge behalten. Da steht auch noch
+einiges was ich hier gerade nicht aufschreibe.
+
+TODO: Vielleicht gibt es demn&#228;chst f&#252;r jedes Paket oder auch Script
+eine eigene TODO Datei. Ich finde doch immer wieder Tags wo ich noch
+was erweitern/berichtigen/hinzuf&#252;gen/... m&#246;chte/wollte.
+
+Im Laufe der Tests und nat. kwpostfix muss ich noch alle
+unterst&#252;tzten Betriebssysteme updaten und XEN (python) auf AMD 64Bit
+reparieren. Hauptsache die Lokalisierung wird fertig.
+
+
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090108/f1e30f49/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20090108/f1e30f49/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000090.html">[Netzworkk-kwtools] Status kwtools
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#88">[ date ]</a>
+              <a href="thread.html#88">[ thread ]</a>
+              <a href="subject.html#88">[ subject ]</a>
+              <a href="author.html#88">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

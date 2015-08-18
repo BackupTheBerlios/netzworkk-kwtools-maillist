@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge, kwparted
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-August/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080816115553.GA8148%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge, kwparted</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080816115553.GA8148%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge, kwparted">kiste at netzworkk.de
+       </A><BR>
+    <I>Sat Aug 16 13:55:54 CEST 2008</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo zusammen,
+
+kwparted erreicht langsam wieder stable Status. Alle Tests liefen
+bisher nur unter grml-1.1 (Live-CD, Debian/i386).
+
+Was geht:
+- anlegen von Partitionstabellen, nur Label msdos, wenn keine
+  existiert.
+- anlegen und l&#246;schen von Partitionen, mit den Dateisystemen ext2/3,
+  vfat, hfs(+), jfs, ntfs, reiserfs, reiser4, ufs und xfs.
+- vergr&#246;ssern/verkleinern von Partitionen ohne Dateisystem.
+- vergr&#246;ssern/verkleinern von Partitionen mit Dateisystem, bisher
+  nur ext2.
+- bei bestehenden Partitionen kann man das Flag (lvm, raid,...)
+  &#228;ndern. Scheint aber nicht richtig unter unstable Debian im Batch
+  Modus zu funktionieren. parted ... set boot on, raid on -&gt; f&#252;hrt
+  dazu das nur das boot Flag gesetzt wird, raid nicht.
+- Zur Berechnung der Laufwerks Gr&#246;ssen wird als erstes die Gr&#246;sse der
+  Zylinder in Bytes (DISK_CYL_BYTES) heraus gefunden und zur
+  Berechnung benutzt.
+- Die Funktion disk wurde erweitert um die Variable DISK_CYL_BYTES.
+
+Das kopieren von Partitionen mit/ohne Dateisystem wurde noch nicht
+getestet.
+
+Hilfe wurde erweitert.
+
+Alles aktuell im cvs.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080816/55cad4d8/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080816/55cad4d8/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

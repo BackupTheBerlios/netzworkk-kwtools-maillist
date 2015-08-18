@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-January/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070128115316.GA7341%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000001.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070128115316.GA7341%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Jan 28 12:53:18 CET 2007</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000001.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+hurra ich habe wieder Internet:)).
+
+Habe auch gleich alle Rechner/Distributionen upgedatet/downloaded.
+CVS ist uptodate.
+
+Der Stand ist:
+CentOS-4.4 - geht alles (Fluechtigkeitsfehler ausgemerzt)
+grml-0.9 - geht alles
+Debian-4.0 - geht alles
+OpenSuSe-10.2 - geht bisher alles (fuer *SuSE kwclock verbessert)
+    parted von *SuSe hat ein Komma Problem (Flag - boot, , , ,....)
+Fedora-6 - ? (noch garnicht getestet)
+
+In allen Distris wurde nicht das Erstellen von DVD's getestet,
+ausser nat. auf Debian. Hatte bisher keinen Film und Zeit. Mache ich
+aber im Zuge von Fedora testen. Desweiteren kann nicht auf allen
+Distris cryptsetup getestet werden (nicht vorhanden). Dort wird dann
+alles wie auf Debian behandelt. Nur wens interressiert auf
+OpenSuSe &gt;=10.1 heisst das Paket util-linux-crypto.
+
+Die Funktion if_conf_file wurde fuer das Script runlevconf ausgebessert,
+Betrifft das loeschen, anlegen und starten, stoppen der Init Scripts
+(sysv-rc, CentOS).
+
+Umstieg auf gettext wurde abgeschlossen.
+
+Es kommt im Script kwrsync_backup zum ersten Mal die Funktion
+sys_logger zum Einsatz. Sie dient zum loggen von Ereignissen im
+Syslog. Siehe <A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A> --&gt; Dokumentation
+Entwicklung --&gt; 1. control.
+
+Wahrscheinlich werde ich am Script film2film noch was aendern, damit
+man auch ohne Angabe des Video_Import filters Filme umwandeln kann.
+Vertrauen liegt dann auf transcode. Ich habe jedenfalls Probleme
+beim umwandeln von AVI zu MPEG. Bin zu bloed den richtigen Filter zu
+finden, trotz Info ueber den Film.
+
+Wie ich gestern im Web gesehen habe ist openmosix bald auch fuer Kernel
+2.6 verfuegbar. Ist jetzt im Alpha Stadium, jedenfalls der Kernel,
+omuscd (OpenMosix User Space Cluster Daemon) und die UserLandTools.
+Ich werde das demnaechst mal antesten. Ich glaube aber nicht das das
+noch in die kwtools-0.6.0 einfliessen wird. Schon alleine weil ich
+noch nicht weiss wie die Distris das handhaben werden (Init-script,
+default-conf, etc.). Das Script openmosix wird also noch auf Kernel
+2.4 stehen bleiben.
+
+Jetzt zum letzten Mal. Wenn Release 0.6.0 draussen ist werde ich
+die kwtools bei Debian-translation anmelden und nochmal Thomas Haas
+(glaube ich) anschreiben mit der Bitte der Aufnahme ins Debian
+Projekt. Bis auf das Script remotesync und englische Uebersetzung,
+scheint alles Reif zu sein.
+
+Das Script remotesync wird eh umgeschrieben in kwrsync und wird dann
+verschiedene Konfigurationen beruecksichtigen. Bisher ging ja nur
+Home Verzeichniss und ein Verzeichnis synchronisieren und dann auch
+nur mit einem Remote-Rechner.
+
+-------------------------------------------------------------------
+Vielleicht fuehre ich in &gt;=0.6.0 ein neues Konzept, fuer das Menue
+anlegen/aendern/loeschen, ein. Es werden dann je nach Auswahl die
+Variablen CREATE/CHANGE/DELETE dementsprechend belegt. Es gibt dann
+nur noch eine Funktion fuer die Konfiguration und nicht mehr
+mehrere. Wie geschrieben &quot;Vielleicht&quot;, muss das erst testen und
+genau ueberlegen. Soll ja ein Vereinheitlichkeitsprozess werden.
+Einheitliche Funktionsnamen und kwtools-Umgebungsvariablen.
+
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070128/c8fc8186/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070128/c8fc8186/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000001.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] ANNOUNCE kwtools Release 0.8.4-2
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2012-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20ANNOUNCE%20kwtools%20Release%200.8.4-2&In-Reply-To=%3C20120212054900.GA22612%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000127.html">
+   <LINK REL="Next"  HREF="000129.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] ANNOUNCE kwtools Release 0.8.4-2</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20ANNOUNCE%20kwtools%20Release%200.8.4-2&In-Reply-To=%3C20120212054900.GA22612%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] ANNOUNCE kwtools Release 0.8.4-2">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Feb 12 06:49:00 CET 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000127.html">[Netzworkk-kwtools] Stand Script kwssl2
+</A></li>
+        <LI>Next message: <A HREF="000129.html">[Netzworkk-kwtools] kommende Release
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Moin,
+
+so die neue Release ist fertig. Dabei wurde nicht nur das Script kwssl2
+fertig erstellt und kwquota weiter entwickelt, sondern auch der Paketbau
+upgedatet.
+
+----------------------------cut---------------------------------
+Paketbau:
+* benutzt jetzt das debhelper Programm dh_lintian und dadurch
+  Umbenennung der debian/*.overrides.lintian -&gt;
+  debian/*.lintian-overrides
+* Pakete die keine Extra Dokumentation besitzen sind jetzt ein Link auf
+  das Dokumentationsverzeichnis vom Paket kwtools-common.
+* Es gibt nur noch eine englische changelog Datei im
+  Dokumentationsverzeichnis, da changelog und changelog.Debian identisch
+  sind.
+* die Release Dateien im Repo-Baum wurden verbessert.
+
+Notiz: Die Version der Release Dateien, im Repository, ist diesmal noch
+0.8.4, also gleiche Versionsnr. wie beim letzten erstellen des
+Repository. Da war leider alles schon hoch geladen.
+
+----------------------------cut---------------------------------
+changelog:
+* kwssl2: Neu - Support fuer Schluessel, Zertifikat und Request
+  (Anforderung) Management. Import einer CA + deren Zertifikate.
+* kwquota: mehr locale Unterstuetzung.
+
+----------------------------cut---------------------------------
+ftp Download:
+ftp <A HREF="ftp://ftp.berlios.de/pub/netzworkk/scripts/kwtools/upload/stable">ftp://ftp.berlios.de/pub/netzworkk/scripts/kwtools/upload/stable</A>
+
+Debian Pakete - /etc/apt/sources.lst:
+deb <A HREF="ftp://ftp.berlios.de/pub/netzworkk/scripts/debian-kwtools">ftp://ftp.berlios.de/pub/netzworkk/scripts/debian-kwtools</A> stable main
+deb-src <A HREF="ftp://ftp.berlios.de/pub/netzworkk/scripts/debian-kwtools">ftp://ftp.berlios.de/pub/netzworkk/scripts/debian-kwtools</A> stable main
+
+So viel Spass beim ausprobieren.
+
+mfg Kai
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120212/2b5fc472/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120212/2b5fc472/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000127.html">[Netzworkk-kwtools] Stand Script kwssl2
+</A></li>
+	<LI>Next message: <A HREF="000129.html">[Netzworkk-kwtools] kommende Release
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

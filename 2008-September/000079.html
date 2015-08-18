@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge, kwparted
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080911044538.GA5291%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000078.html">
+   <LINK REL="Next"  HREF="000080.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge, kwparted</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080911044538.GA5291%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge, kwparted">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Sep 11 06:45:39 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000078.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+        <LI>Next message: <A HREF="000080.html">[Netzworkk-kwtools] kommende Release 0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#79">[ date ]</a>
+              <a href="thread.html#79">[ thread ]</a>
+              <a href="subject.html#79">[ subject ]</a>
+              <a href="author.html#79">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Marcus Franke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">marcus.franke at gmx.net</A>&gt; schrieb am [10.09.08 08:48]:
+&gt;<i> On Tue, Sep 09, 2008 at 06:08:11PM +0200, Kai Wilke wrote:
+</I>&gt;<i> &gt; &gt; 
+</I>&gt;<i> &gt; &gt; vlan ist doch so schlimm nicht. Zumindest unter RedHat/Centos
+</I>&gt;<i> &gt; &gt; brauchst du &quot;nur&quot; ein vlan=yes in die Configs zu schreiben und
+</I>&gt;<i> &gt; &gt; die Dateien m&#252;ssen vom Syntax her ifcfg-eth0.[1-4095] benannt
+</I>&gt;<i> &gt; &gt; sein, dann &#252;bernimmt er die .Zahl als vlan ID.
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Fedora/Redhat/CentOS/Debian kein Problem, aber Gentoo ist f&#252;r mich
+</I>&gt;<i> &gt; neu und alle Parameter anders. Sowas wie:
+</I>&gt;<i> &gt; local_netcard_eth = ( 0, 192.168.0.1/24 )
+</I>&gt;<i> &gt; ist komplett aus dem Kopf, aber so in der Art.
+</I>&gt;<i> 
+</I>&gt;<i> Ich habe gentoo fr&#252;her mit grosser Begeisterung eingesetzt. Aber
+</I>&gt;<i> an eine Netzwerkconfiguration in dieser Art erinnere ich mich
+</I>&gt;<i> nicht (mehr).
+</I>
+Wie gesagt aus dem Kopf. F&#252;r den dhcp server haben sie 5 Zeilen und
+bei den clients glaube ich 2 Zeilen. Die Beispiel Datei erschl&#228;gt
+einen auf den 1. Blick. Mich st&#246;rt ein bischen die Variablen Namen.
+Heisst f&#252;r die kwtools wieder extra Code:(. Obwohl ich da auch schon
+seit einiger Zeit drueber nachdenke einige Sachen nach Hardware/OS
+zu benennen
+(functions/kwparted/{sun_read_parted,msdos_read_parted,...).
+
+Ach so, der genannte Kernel war schon mal kompiliert worden, deshalb
+die 2 Min.. Habe aber heute einen neu gebaut und der war auch in 10
+Min. fertig ;-).
+
+&gt;<i> 
+</I>&gt;<i> &gt; Auch sonst der Runlevel Mechanismus
+</I>&gt;<i> &gt; (/etc/runlevel/{boot,default,..}); komplett anders ; kenne sonst
+</I>&gt;<i> &gt; auch nur /etc/rc?.d/???prog_link --&gt; /etc/init.d/prog
+</I>&gt;<i> &gt; und halt /etc/init.d/rc?.d/???prog_link... o.s.&#228;..
+</I>&gt;<i> 
+</I>&gt;<i> Hehe, ich finde mich schon auf Debian nicht mehr zurecht, die
+</I>&gt;<i> sind da wohl auch erst mit der 5er Reihe LSB kompatibel geworden.
+</I>
+Die sind doch erst bei 3.*. Debian wahr aber lange hinter her. Wie
+weit sie jetzt sind keine Ahnung.
+
+Das ist ja noch einfach, da ziemlich gleich wie *SuSE und Co.
+Gentoo und auch die *BSD gehen da einen etwas anderen Weg.
+Aufregen tut mich /etc/sysconfig (SUSE), /etc/default (Debian),
+/etc/conf.d (gentoo). Wo bleibt da die LSB?
+
+&gt;<i> Ich fand an Gentoo das emerge/portage System grossartig. Das haben
+</I>&gt;<i> sie ja sehr erfolgreich von den BSD's geklaut. Da ich inzwischen
+</I>
+Gut f&#252;r die Hardware/Software. Laut letzte was ich geh&#246;rt habe ist
+das Debian Paket Management das beste zur Zeit. Mir fehlen unter
+gentoo auch einige Dinge, wie z.B. ausf&#252;hrliche Paketbeschreibung.
+
+&gt;<i> selbst FreeBSD User bin, wundere ich mich immer wieder, dass diese
+</I>&gt;<i> Tools nicht r&#252;ckportiert wurden.
+</I>
+Menschen sind Individuen:). Mich w&#252;rde das interaktive eingreifen
+w&#228;hrend des Boot Prozesses erfreuen, ohne kernel Parameter. Lange
+nicht mehr mit sven (openBSD) geredet aber der hatte mal so was
+erw&#228;hnt das das unter *BSD funzt.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080911/78b3d675/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080911/78b3d675/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000078.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+	<LI>Next message: <A HREF="000080.html">[Netzworkk-kwtools] kommende Release 0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#79">[ date ]</a>
+              <a href="thread.html#79">[ thread ]</a>
+              <a href="subject.html#79">[ subject ]</a>
+              <a href="author.html#79">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

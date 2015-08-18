@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-January/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080110035404.GB26344%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000033.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] kwtools-0.7.0 Beta Test</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20kwtools-0.7.0%20Beta%20Test&In-Reply-To=%3C20080110035404.GB26344%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] kwtools-0.7.0 Beta Test">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Jan 10 04:54:05 CET 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000033.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [22.12.07 00:56]:
+&gt;<i> High Leute,
+</I>&gt;<i> 
+</I>&gt;<i> [...
+</I>&gt;<i> von verschluesselten Laufwerken mit LUKS Erweiterung.
+</I>&gt;<i> 
+</I>&gt;<i> kwlosetup kann leider noch nicht Schluesseldateien
+</I>&gt;<i> erstellen/loeschen.
+</I>
+Ist in Planung auch das erkennen von vorhandenen Laufwerken/Dateien.
+
+&gt;<i> 
+</I>&gt;<i> [...]
+</I>&gt;<i> Die Funktion count_display_col ist noch nicht ganz ausgereift im
+</I>&gt;<i> Umgang mit Arrays. Das Fenster der Partitionsanordnungen von
+</I>&gt;<i> kwparted ist dadurch zu klein.
+</I>
+Ist geklaert, lag an der Variable &quot;IFS&quot;.
+
+&gt;<i> 
+</I>&gt;<i> -------------------------------------------------------------------
+</I>&gt;<i> Fuer die Tests habe ich bisher nur LiveCDs von CentOS5,
+</I>&gt;<i> grml64_0.02, grml_1.0-5 und Fedora8 downloaded.
+</I>&gt;<i> 
+</I>&gt;<i> Fuer Fedora, CentOS und OpenSuSE wird man nur die
+</I>&gt;<i> Distriebutionsspezifischen Dinge testen muessen.
+</I>
+uebermorgen.
+
+&gt;<i> 
+</I>&gt;<i> grml ist Debian/sid und wird bis auf amd64 standardmaessig getestet.
+</I>&gt;<i> Einzige Ausnahme ist das Init-Runlevel-System. grml benutzt file-rc.
+</I>
+file-rc (kwrunlevconf) funzt unter Debian i386/amd64.
+
+&gt;<i> 
+</I>&gt;<i> Ich habe jetzt ein Macbook (alt), und nen Mac (?, auch alt) komplett
+</I>
+Noch keine Zeit zum testen gehabt.
+
+&gt;<i> 
+</I>&gt;<i> Wer schon mal die kwtools testen moechte, denn fuer mich sind sie
+</I>&gt;<i> langsam Beta, kann sie aus dem cvs ziehen. Zur Zeit ist immer alles
+</I>&gt;<i> aktuell.
+</I>&gt;<i> cvs -d
+</I>&gt;<i> :pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk login
+</I>&gt;<i> cvs -z3
+</I>&gt;<i>  -d:pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk co
+</I>&gt;<i>  scripts/kwtools
+</I>&gt;<i> 
+</I>-----------------------------------------------------------------------
+News:
+Unter Debian sid i386/amd64 sind fast alle Scripts fertig getestet. Es
+fehlen nur noch die Tests mit den Tabellen von kwpostfix und ob kwgrub
+mit seperater Boot Partition funktioniert.
+
+Es kamen 2 Funktionen hinzu.
+check_home_conf_dir - falls ein Script per &quot;sudo&quot; ausgef&#252;hrt wird. Da
+die Variable &quot;HOME&quot; nicht neu belegt wird
+pr&#252;ft diese Funktion ob man als root oder als normaler Benutzer
+eingeloggt ist und belegt dementsprechend den Pfad zu dem ~/.kwtools
+Verzeichnis.
+
+Die Funktion read_fstab - liest die Datei /etc/fstab ein. Dabei kann
+man der Funktion ein Suchmuster &#252;bergeben.
+
+Die Funktion script_init loescht jetzt beim Start eines Scripts die
+tmp-Verzeichnisse, falls durch Absturz etc. diese nicht geloescht
+wurden. Die tmp-Verzeichnisse sind einzigartig falls man in einem
+anderen Terminal weiterarbeitet oder jemand anderes eingeloggt
+arbeitet.
+
+Kleine Rand Notiz: Unter Xen funktionieren einige Scripts nicht,
+wie kwparted (keine Disk), kwclock (hwclock, keine /dev/rtc), ....
+
+Ich weiss auch noch nicht wie man erkennt ob man unter Xen in einer
+DomU arbeitet oder nicht. Scheint aber nicht nur mein Problem zu
+sein, siehe hwclock, .... 
+
+Ich fange &#220;bermorgen mit den Tests der anderen Distributionen an.
+------------------------------------------------------------------
+Hi runciman, wie gehts deinem Kind und auch so? Meld dich mal
+bitte. 
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080110/8293c929/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080110/8293c929/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000033.html">[Netzworkk-kwtools] kwtools-0.7.0 Beta Test
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#32">[ date ]</a>
+              <a href="thread.html#32">[ thread ]</a>
+              <a href="subject.html#32">[ subject ]</a>
+              <a href="author.html#32">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

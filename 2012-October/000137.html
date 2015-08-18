@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Bugfixing in kwtools-0.8.5-3
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2012-October/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bugfixing%20in%20kwtools-0.8.5-3&In-Reply-To=%3C20121017202318.GA3400%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000136.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Bugfixing in kwtools-0.8.5-3</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bugfixing%20in%20kwtools-0.8.5-3&In-Reply-To=%3C20121017202318.GA3400%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Bugfixing in kwtools-0.8.5-3">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Oct 17 22:23:18 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000136.html">[Netzworkk-kwtools] (fwd) Announce kwtools Release 0.8.5-3	[kiste at netzworkk.de]
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#137">[ date ]</a>
+              <a href="thread.html#137">[ thread ]</a>
+              <a href="subject.html#137">[ subject ]</a>
+              <a href="author.html#137">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo,
+
+wie ich schon geschrieben hatte, wurde die Release 0.8.5-3 der Pakete
+aus Zeitgr&#195;&#338;nden erstellt.
+
+Nun hatte ich gestern 2 kwtools-tools ben&#195;&#182;tigt und siehe da sie
+funktionierten nicht bzw. es hatte sich was ge&#195;&#8364;ndert. Danach hatte ich
+ein paar Scripte aufgerufen, die ich schon l&#195;&#8364;nger nicht benutzt bzw.
+weiterentwickelt/neu getestet hatte, und nat&#195;&#338;rlich Fehler gefunden.
+
+Alle Bug gefixten Dateien sind bisher nur im Repository vorhanden.
+
+Bugs gefixt in folgenden Scripten:
+kwnetstat - Hauptmen&#195;&#338; funktionierte nicht
+kwvmstat - Option -m nur f&#195;&#338;r den Benutzer root
+kwecryptfs - Support f. Kernel &gt;=2.6.24
+kwadmin - Bug in der Konfiguration des Tmp-Verzeichnis
+alle Cron Scripte - l&#195;&#182;schen der Lock Datei in trap &quot;...&quot; aufgenommen
+
+Die Hilfe Dateien wurden erweitert. Durch die Ver&#195;&#8364;nderungen m&#195;&#338;ssen auch
+noch die dazugeh&#195;&#182;rigen ../debian/po/SCRIPTNAME/* Dateien angepasst
+werden. Dieses werde ich wohl aber erst am Wochenende schaffen.
+
+mfg Kai
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.org">http://www.netzworkk.org</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20121017/b8216721/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20121017/b8216721/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000136.html">[Netzworkk-kwtools] (fwd) Announce kwtools Release 0.8.5-3	[kiste at netzworkk.de]
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#137">[ date ]</a>
+              <a href="thread.html#137">[ thread ]</a>
+              <a href="subject.html#137">[ subject ]</a>
+              <a href="author.html#137">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

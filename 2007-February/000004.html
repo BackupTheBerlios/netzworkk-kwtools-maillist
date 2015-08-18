@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-February/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070213082800.GA4572%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000003.html">
+   <LINK REL="Next"  HREF="000005.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070213082800.GA4572%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Feb 13 09:28:00 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000003.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+        <LI>Next message: <A HREF="000005.html">[Netzworkk-kwtools] Release kwtools-0.6.0-rc1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [05.02.07 18:53]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [05.02.07 09:26]:
+</I>&gt;<i> &gt; &gt; &gt; [...]
+</I>&gt;<i> &gt; &gt; &gt; Fedora-6 - ? (noch garnicht getestet)
+</I>&gt;<i> &gt; 
+</I>&gt;<i> &gt; Musste die Funktionen if_conf_{file,prog} und os_check um Fedora
+</I>&gt;<i> &gt; erweitern. Unterscheidet sich doch einiges zu CentOS oder auch dem
+</I>&gt;<i> &gt; alten RedHat.
+</I>&gt;<i> 
+</I>&gt;<i> if_conf_file wurde um die Optionen grub und change_grub erweitert.
+</I>&gt;<i> Diese lesen und veraendern die Datei /boot/grub/menu.lst. Fedora hat
+</I>&gt;<i> ein anderes Format dieser (Bsp. timeout=10 und nicht timeout 10).
+</I>
+Fedora hat auch so einiges anders oder nen Bug. Die
+Netzwerkkartenkonfigurationsdatei endet mit einem &quot;\&quot;. Man muss also
+eine eigene mittels kwnetcardconf anlegen. Ich finde bei Fedora auch
+kein cyrus oder courier IMAP/POP-server Pakete.
+
+gettext funzt mit zsh auch noch nicht auf Fedora6. Man muss also wieder
+diese Zeile in functions/var/script_init aendern in
+command source /usr/bin/gettext.sh --&gt;
+/bin/bash -c 'source /usr/bin/gettext.sh'
+
+Ansonsten ist Fedora6 ziemlich uptodate.
+
+&gt;<i> Fehlt eigentlich nur noch etwas kwgrub (eigene Boot-Partition),
+</I>&gt;<i> kwssl und die DVD-Erstellung testen.
+</I>
+Jetzt ist nur DVD-Erstellung testen. Ein Gl&#252;ck das ich diesmal
+kleinere Filme/Kapitel habe. Vorherige Tests waren meist mit Filmen
+die man danach eh behalten wollte, also &gt;=80 Min..
+
+--------------------------------------------------------------------
+Weiss noch jemand wie man bei Belios das Passwort fuer nen neuen
+Developer aendert und Zugriff auf das Repository erlaubt? Am Do.
+letzter Wo. wollte ich das bei Runciman einrichten.
+
+Das gute war: Runciman arbeitet mit Ubuntu und wir haben die Sourcen
+installiert. Wobei man gleich 2 Fehler bemerkt hatte. Naemlich die
+Anzeige der Fehlernachrichten falls Terminal Aufloesung zu klein ist
+und wenn das Programm dialog nicht installiert ist. Beide Fehler
+sind im cvs berichtigt. Ausloeser war &quot;setterm -reset&quot; in der trap
+Zeile der Scripts. Jetzt muss man erst ENTER druecken bevor es
+weiter geht, dann muss man die Fehlernachricht wenigstens lesen.
+
+------------------------------------------------------------------
+Ab 0.6.0 muss noch einiges getan werden fuer 1.0.0. Das ist vor
+allem die Vereinheitlichung der Funktionsnamen und der Menues. Da
+ist doch einiges gewuchert die Jahre. Das mag alles seine
+Berechtigung haben/hatte, aber bei einer mitlerweile doch grossen
+Sammlung an Scripts sollte es eine einheitliche Benutzerfuehrung
+geben.
+
+Der Anfang habe ich ja mit kwrsync (Function ccde_conf) angefangen.
+Muss aber alles noch reifen und so schnell wird das auch nicht gehen.
+Manche Scripts haben einen Aufbau wo die Umstellung nicht so einfach
+ist.
+
+Naja und vdvdburn muss ja ueberarbeitet (evtl. lxdvdrip Einsatz)
+werden. Openmosix sollte mal langsam fertig werden fuer Kernel 2.6*.
+
+Ok, es gibt viel zu tun lassen wir es sein:))
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070213/b24b31d0/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070213/b24b31d0/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000003.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+	<LI>Next message: <A HREF="000005.html">[Netzworkk-kwtools] Release kwtools-0.6.0-rc1
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Fortschritt bei kwtools
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-July/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Fortschritt%20bei%20kwtools&In-Reply-To=%3C20070715150510.GA19509%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000015.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Fortschritt bei kwtools</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Fortschritt%20bei%20kwtools&In-Reply-To=%3C20070715150510.GA19509%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Fortschritt bei kwtools">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Jul 15 17:05:10 CEST 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000015.html">[Netzworkk-kwtools] Fortschritt bei kwtools
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [01.07.07 08:06]:
+&gt;<i> High Leute,
+</I>&gt;<i> 
+</I>&gt;<i> [... ]
+</I>&gt;<i> Die Funktionen net_conf und sys_conf wurden creiert. 2. ist noch in
+</I>&gt;<i> Entwicklung. Die Funktion net_conf konfiguriert Proxy (http/ftp),
+</I>&gt;<i> IP-Adresse, Rechnername, Gateway, Netmask, Broadcast, Dhcp, ob beim
+</I>&gt;<i> booten schon das Netzwerk starten soll und Nameserver. Die meisten
+</I>&gt;<i> Funktionen in net_conf fangen mit &quot;iface_*&quot; an. Die Funktion
+</I>
+Die Funktion net_conf wurde um Optionen bei den Funktionen
+conf_hostname und conf_proxy erweitert. Desweiteren wurde der Header
+der Funktion erweitert.
+
+&gt;<i> [...]
+</I>&gt;<i> 
+</I>&gt;<i> Neue globale Variablen sind dadurch auch dazugekommen:
+</I>&gt;<i> # Funktion net_conf
+</I>
+gv_Proxy - Proxy ohne Protokoll (Bsp.: 192.168.0.1:3128)
+
+&gt;<i> 
+</I>&gt;<i> Policy habe ich zur Entwicklung noch nicht geschrieben:(, aber ich
+</I>&gt;<i> habe ja jetzt wieder mehr Zeit. Arbeitslosigkeit ist seit gestern
+</I>&gt;<i> offiziell. Gut Behoerdengaenge, aber das wird schon nicht soviel
+</I>&gt;<i> Zeit beanspruchen - bin ja Frueaufsteher:)
+</I>
+Ja, scheisse, irgendwann:)), kommt. Bin erst mal deprimiert:(
+
+&gt;<i> 
+</I>&gt;<i> cvs ist aktuell, die Doku und Hilfe zu den kwxen-tools muss ich noch
+</I>&gt;<i> schreiben, iss eh noch nich fertich:)). Scheint aber gross zu
+</I>
+Hilfe in den kwtools iss schon, blo&#223; noch nicht in den docs.
+Man kann Laufwerke anlegen und loeschen. Aendern oder konfigurieren
+kann man das Laufwerk bzw. die Vorlagen-Datei noch nicht.
+Auch hat das anlegen von Laufwerken noch nicht alle Prueffunktionen.
+Da fehlen noch Tests mit debootstrap und rpmstrap.
+
+&gt;<i> [...]
+</I>&gt;<i> was man alles beachten muss. xen-create-image hat schon viele
+</I>&gt;<i> Optionen, wo ich erstmal 3 weggelassen habe (--role*). Das Gute ist
+</I>&gt;<i> das die xen-*-* fast einheitliche Optionen/Parameter besitzen.
+</I>
+Oder auch nicht. Na ja, wird schon werden.
+
+&gt;<i> 
+</I>&gt;<i> Wer die kwxen-tools ausprobieren will kann sie ja aus dem cvs
+</I>&gt;<i> ziehen.
+</I>&gt;<i> cvs -d :pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk
+</I>&gt;<i>   login
+</I>&gt;<i> cvs -z3 -d:pserver:<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">anonymous at cvs.netzworkk.berlios.de</A>:/cvsroot/netzworkk
+</I>&gt;<i>   co scripts/kwtools
+</I>&gt;<i> Alles eine Zeile ab bis &quot;cvs&quot;.
+</I>&gt;<i> 
+</I>
+werdender changelog:
+  * new functions check_memory, no_memory_msg, net_conf,
+    no_ip_address_msg, no_valid_ip_msg and sys_conf.
+  * new Script kwxen-tools.
+  * The Scripts kwproxy, planer, kwclock, kwrip, kwxen-tools
+    used the function net_conf.
+  * The Script kwgrub used the function sys_conf.
+  * po file from kwtools-common extended.
+  * Script raid renamed to kwraid and have gauge
+    for create and raidhot_add_remove.
+  * Script kwrsync - new help
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070715/2f26ad39/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070715/2f26ad39/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000015.html">[Netzworkk-kwtools] Fortschritt bei kwtools
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#16">[ date ]</a>
+              <a href="thread.html#16">[ thread ]</a>
+              <a href="subject.html#16">[ subject ]</a>
+              <a href="author.html#16">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

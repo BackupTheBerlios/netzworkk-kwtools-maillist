@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge, kwparted
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080901021541.GA17040%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000074.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge, kwparted</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge%2C%20kwparted&In-Reply-To=%3C20080901021541.GA17040%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge, kwparted">kiste at netzworkk.de
+       </A><BR>
+    <I>Mon Sep  1 04:15:41 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000074.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#72">[ date ]</a>
+              <a href="thread.html#72">[ thread ]</a>
+              <a href="subject.html#72">[ subject ]</a>
+              <a href="author.html#72">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [16.08.08 13:55]:
+&gt;<i> Hallo zusammen,
+</I>&gt;<i> 
+</I>&gt;<i> kwparted erreicht langsam wieder stable Status. Alle Tests liefen
+</I>&gt;<i> bisher nur unter grml-1.1 (Live-CD, Debian/i386).
+</I>
+und Debian/i386 sid, parted-1.8.8.git.2008.03.24-8
+
+&gt;<i> 
+</I>&gt;<i> Was geht:
+</I>&gt;<i> - anlegen von Partitionstabellen, nur Label msdos, wenn keine
+</I>&gt;<i>   existiert.
+</I>
+Der Men&#252;punkt Backup wurde umbenannt in Partitionstabelle. Unter
+diesem kann man den MBR und die Partitionstabelle mit den Parametern
+Byte und compact (gute lesbare Form) sichern, zur&#252;ck sichern (noch
+nicht implementiert) und die Partitionstabelle l&#246;schen. Entweder
+einzeln oder alle Festplatten auf einmal.
+
+&gt;<i> - anlegen und l&#246;schen von Partitionen, mit den Dateisystemen ext2/3,
+</I>&gt;<i>   vfat, hfs(+), jfs, ntfs, reiserfs, reiser4, ufs und xfs.
+</I>&gt;<i> - vergr&#246;ssern/verkleinern von Partitionen ohne Dateisystem.
+</I>&gt;<i> - vergr&#246;ssern/verkleinern von Partitionen mit Dateisystem, bisher
+</I>&gt;<i>   nur ext2.
+</I>
+Kopieren muss noch neu angepasst/verbessert und Check implementiert
+werden. Ansonsen funzt es aber so wie es hier steht. Werde heute mit
+der Funktion copy_fs anfangen - es fehlt ja auch noch einiger
+FS-Support.
+
+Abk&#252;rzungen:
+cr - erstellen
+ch - &#228;ndern
+cp - kopieren
+del - l&#246;schen
+vg - vergr&#246;ssern
+vk - verkleinern
+chk - &#220;berpr&#252;fung (noch nicht implementiert)
+mv - verschieben (noch nicht implementiert)
++vg - plus vergr&#246;ssern/anpassen
+
+Bestandene Tests:
+swap - cr,ch,del,vg,vk,cp (alles egal)
+ext2 - cr,ch,del,vg,vk,cp (ziel &gt;= Src, +vg)
+ext3 - cr,ch,del,vg,vk,cp (ziel &gt;= Src, +vg)
+hfs* - cr,ch,del,vk,cp (kein support in copy_fs)
+fat16 - cr,ch,del,vk,cp (ziel &gt;= Src)
+fat32 - cr,ch,del,vk (-&gt;fat16 bisher),vg,cp (ziel &gt;= Src, +vg)
+jfs - cr,ch,del,cp (kein support in copy_fs)
+ntfs - cr,ch,del,cp (ziel &gt;= Src, +vg)
+reiserfs - cr,ch,del,cp (ziel &gt;= Src, +vg)
+reiser4 - cr,ch,del
+ufs - cr,ch,del,cp (kein support in copy_fs)
+xfs - cr,ch,del,cp (ziel &gt;= Src, +vg)
+
+&gt;<i>   [...
+</I>&gt;<i> - Zur Berechnung der Laufwerks Gr&#246;ssen wird als erstes die Gr&#246;sse der
+</I>&gt;<i>   Zylinder in Bytes (DISK_CYL_BYTES) heraus gefunden und zur
+</I>&gt;<i>   Berechnung benutzt.
+</I>
+Die Berechnung wird jetzt mit Bytes ausgef&#252;hrt und das SI-Prefix
+Dezimal zur Berechnung benutzt (1MB=100.000Bytes). Die Berechnung
+der Gr&#246;ssen funzt jetzt korrekt.
+
+&gt;<i> Das kopieren von Partitionen mit/ohne Dateisystem wurde noch nicht
+</I>&gt;<i> getestet.
+</I>&gt;<i> 
+</I>&gt;<i> Hilfe wurde erweitert.
+</I>
+Die Hilfe, die Doku, die Manpage wurden erweitert/verbessert.
+
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080901/5b442c92/attachment-0001.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080901/5b442c92/attachment-0001.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000074.html">[Netzworkk-kwtools] Stand der Dinge, kwparted
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#72">[ date ]</a>
+              <a href="thread.html#72">[ thread ]</a>
+              <a href="subject.html#72">[ subject ]</a>
+              <a href="author.html#72">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

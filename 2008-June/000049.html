@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] werdende kwtools-0.7.2-0
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20werdende%20kwtools-0.7.2-0&In-Reply-To=%3C20080610164424.GA31107%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000050.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] werdende kwtools-0.7.2-0</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20werdende%20kwtools-0.7.2-0&In-Reply-To=%3C20080610164424.GA31107%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] werdende kwtools-0.7.2-0">kiste at netzworkk.de
+       </A><BR>
+    <I>Tue Jun 10 18:44:24 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000050.html">[Netzworkk-kwtools] werdende kwtools-0.7.2-0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+habe mit dem Script kwquota angefangen. Es unterst&#252;tzt auch das XFS
+Dateisystem. Als tools werden quotatool, xfs_quota und repquota
+genutzt. Ein/Ausschalten/Dump/restore von Quota ist noch nicht
+implementiert. 
+
+Wer das Script mal anschauen m&#246;chte es ist im cvs.
+
+Was geht:
+- Anzeige von 1 oder mehreren Quota Laufwerken.
+- Erstellen/ver&#228;ndern/l&#246;schen von Quota f&#252;r Benutzer, geht
+  hervorragend.
+- Erstellen/ver&#228;ndern/l&#246;schen von Quota f&#252;r Gruppen, will auf
+  Debian/Lenny nicht. Sollte aber gehen da es nichts anderes als f&#252;r
+  Benutzer ist. Die Option -u (User) wird nur gegen -g (Group)
+  getauscht.
+- Erstellen/ver&#228;ndern/l&#246;schen von Quota f&#252;r Projekte (XFS), noch nicht
+  implementiert. D&#252;rfte bei xfs nichts anderes als f&#252;r
+  Gruppen/Benutzer sein, bloss das noch 2 Dateien extra angelegt
+  werden.
+
+kwquota erzeugt beim Start die Dateien /Quota_Dev/(a)quota.user und
+/Quota_Dev/(a)quota.group falls diese noch nicht existieren und das
+Quota gerade aktiviert wurde (fstab,remount,...).
+
+Bisher wurde alles auf Debian/i386 Lenny Laptop getestet.
+
+changelog bisher:
+kwtools (0.7.2-0) unstable; urgency=low
+  * kwgroup/kwuser: add new options and display.
+  * kwquota: create.
+  * function read_fstab: simplified.
+  * function search_packages: new variables NO_PACKAGES(_E).
+  * new function no_package_inst_msg.
+
+F&#252;r die kwxen-tools sollte ich vielleicht auf xen-3.2 updaten. Zur
+Zeit meckert xen beim start &#252;ber irgendeine python Datei. Na ja,
+wird schon. kwquota ist wichtiger, da hier ab und zu einige User die
+Home Partition (ausversehen) zu knallen.
+
+Doku, cvs, manpages sind aktuell.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080610/7e8d15db/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080610/7e8d15db/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000050.html">[Netzworkk-kwtools] werdende kwtools-0.7.2-0
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#49">[ date ]</a>
+              <a href="thread.html#49">[ thread ]</a>
+              <a href="subject.html#49">[ subject ]</a>
+              <a href="author.html#49">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

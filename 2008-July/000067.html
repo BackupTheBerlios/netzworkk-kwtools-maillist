@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Bug fixing und Verbesserungen
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bug%20fixing%20und%20Verbesserungen&In-Reply-To=%3C20080719001123.GA13029%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000066.html">
+   <LINK REL="Next"  HREF="000069.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Bug fixing und Verbesserungen</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Bug%20fixing%20und%20Verbesserungen&In-Reply-To=%3C20080719001123.GA13029%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Bug fixing und Verbesserungen">kiste at netzworkk.de
+       </A><BR>
+    <I>Sat Jul 19 02:11:23 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000066.html">[Netzworkk-kwtools] reiserfs/reiser4
+</A></li>
+        <LI>Next message: <A HREF="000069.html">[Netzworkk-kwtools] Bug fixing und Verbesserungen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+muss ja jetzt wieder arbeiten und bin auf einmal wieder ein
+gefragter Mann - da kennen mich Leute oder haben von mir geh&#246;rt die
+kannte ich noch gar nicht. Na ja, die Leute (Linux Schulungs
+Netzwerk) sind alle helle im Kopp und auch so.
+
+Aber bis auf einem (grade Schulung/Pr&#252;fung) k&#246;nnen alle wohl nur
+bedingt auf der konsole arbeiten. Setzen alle auf KDE und wenns
+nicht geht wie es soll ?.
+
+Wie man merkt arbeite ich eh nur noch Nachts an den kwtools.
+
+So zum Thema:
+
+Die Funktion convert_drive_size - berechnet *Bytes in KBytes und
+umgekehrt - wurde verbessert/ausged&#252;nnt. Rechnet jetzt mit 3 Stellen
+nach dem Komma (typeset -F3 Variable). Die urspr&#252;ngliche Version
+hatte bei zu grossen Zahlen zu viel Abweichung.
+
+kwparted w&#252;rde ich zur Zeit nicht benutzen. Irgendwie muss ich da
+auch noch was mit der Berechnung des Platzes machen. Habe zur Zeit
+nur die Fehlermeldung &quot;Error: ... overlapping Partition ...&quot;
+
+Alle Scripts die convert_drive_size benutzen sind uptodate.
+
+Kleine Fehler wurden in kwuser (Leerzeichen im Kommentarfeld),
+kwwvdialconf (Tel.-Nr Eingabe *99# [Handyverbindung]) ausgebessert.
+
+Die Funktionen formatprogs_check und format wurden
+verbessert/erweitert (FS), Option -a --&gt; -p (parted). So kann jetzt
+format ohne formatprogs_check auskommen wenn es schon vorher
+ausgef&#252;hrt wurde. Wenn installiert unterst&#252;tzen sie jetzt die FS
+fat32, ext2/3, hfs(+), jfs, linux-swap (parted), resierfs, reiser4,
+swap, xfs und ufs.
+
+Noch was zu den FS Linus Torvalds und andere Kernel Entwickler
+warten mit Spannung auf die Produktionsreife von btrfs. Sind
+ziemlich alle begeistert, wenn ich das richtig verstanden hatte.
+
+mfg Kiste, und sch&#246;nes WE noch.
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080719/a478e6ed/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080719/a478e6ed/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000066.html">[Netzworkk-kwtools] reiserfs/reiser4
+</A></li>
+	<LI>Next message: <A HREF="000069.html">[Netzworkk-kwtools] Bug fixing und Verbesserungen
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

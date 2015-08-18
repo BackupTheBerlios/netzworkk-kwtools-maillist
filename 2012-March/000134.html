@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Announce kwtools-zshskel 0.1.0 und 0.0.3
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2012-March/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Announce%20kwtools-zshskel%200.1.0%20und%200.0.3&In-Reply-To=%3C20120329121838.GA8556%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000133.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Announce kwtools-zshskel 0.1.0 und 0.0.3</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Announce%20kwtools-zshskel%200.1.0%20und%200.0.3&In-Reply-To=%3C20120329121838.GA8556%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Announce kwtools-zshskel 0.1.0 und 0.0.3">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Mar 29 14:18:38 CEST 2012</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000133.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-2
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute ;-)
+
+so die beiden kwtools-zshskel Releases sind draussen.
+
+Was ist passiert?:
+In beiden Releases kann man mit &quot;prompt kiste&quot; das Prompt-system von
+Frank Terbeck laden + Battery-Anzeige bei Netbooks, falls &quot;acpi&quot;
+intalliert ist und die Variable BATTERY (~/.zshrc.d/020-variables.z)
+auf 1 gesetzt ist.
+
+-------------------------------cut-------------------------------
+- Release 0.0.3
+ * neue Completions (_dialog, _kwuser _psql).
+ * neues Plugin System.
+
+- Release 0.1.0
+ * Neues zsh setup system.
+ * update Plugin System.
+
+-------------------------------cut-------------------------------
+Plugin System:
+In der Variable PLUGINS (~/.zshrc.d/020-variables.z) kann man angeben
+welche Plugins beim Start der &quot;zsh&quot; ausgef&#195;&#188;hrt werden sollen.
+
+Dies sind zsh-Scripte die beim Start der &quot;zsh&quot; mittels &quot;source&quot;
+eingelesen und ausgef&#195;&#188;hrt werden. Dabei kann eine Tastatur Eingabe
+erforderlich sein.
+
+Zur Zeit existieren nur die Plugins autojump, dirpersist, gpg-agent
+und ssh-agent. Alle Plugins liegen unter ~/.zplugins und haben die
+Endung .plugin.
+
+autojump   - siehe dem Debian Paket autojump
+dirpersist - speichert beim ausloggen die Ausgabe von &quot;dirs -p | uniq&quot;
+             in der Datei ~/.zdirs und erstellt beim einloggen aus
+             dieser Datei den $dirstack von &quot;dirs&quot;.
+gpg-agent  - startet den gpg-agent.
+ssh-agent  - startet den ssh-agent. Siehe auch den Header der Datei.
+
+-------------------------------cut-------------------------------
+neues zsh setup system (Release 0.1.0):
+Frank Terbeck hat sein zsh setup System umgestellt, auf deren
+Grundlage ja die kwtools-zshskel basieren.
+
+Siehe <A HREF="http://ft.bewatermyfriend.org/comp/zsh.html">http://ft.bewatermyfriend.org/comp/zsh.html</A>
+
+Die Header der Dateien sind noch nicht komplett eingestellt. Da fehlen
+noch die Namen und andrere Sachen von Frank Terbeck. Da komme ich noch
+nicht so mit dem &quot;dewi&quot; (CVS-System) zurecht. Oder ich muss mir da erst
+einmal ein Script zu schreiben.
+
+Da einige Dateien noch nicht ausgereift sind habe ich diese so
+ver&#195;&#164;ndert, bzw. erweitert das sie funktionieren.
+
+-------------------------------cut-------------------------------
+my Gehirn:
+
+Ich mache mir erst einmal Gedanken zur &quot;zsh&quot; und sortiere alles. Dann
+werde ich mal Frank Terbeck anschreiben, ob nun wegen Hilfe
+(sein Zeitmangel) oder anderweitig. Irgendwie gef&#195;&#164;llt mir auch mein
+plugin System noch nicht wirklich.
+
+-------------------------------cut-------------------------------
+Das debian-kwtools Repository ist aktuell und das Pakete kann mit den
+dpkg/apt Werkzeugen installiert werden.
+
+apt-get update
+apt-get install kwtools-zshskel
+
+Die html-Dokumentation wurde noch nicht erweitert :(, bzw. steht eh
+nicht viel drin.
+
+-------------------------------cut-------------------------------
+
+mfg Kiste und viel Spass mit der zsh.
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 198 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120329/ee1a331b/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20120329/ee1a331b/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000133.html">[Netzworkk-kwtools] ANNOUNCE kwtools-0.8.5-2
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

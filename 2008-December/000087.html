@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Status+kwecryptfs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-December/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%2Bkwecryptfs&In-Reply-To=%3C20081209234345.GA15365%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Status+kwecryptfs</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%2Bkwecryptfs&In-Reply-To=%3C20081209234345.GA15365%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Status+kwecryptfs">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Dec 10 00:43:45 CET 2008</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87">[ date ]</a>
+              <a href="thread.html#87">[ thread ]</a>
+              <a href="subject.html#87">[ subject ]</a>
+              <a href="author.html#87">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hallo Leute,
+
+ist in letzter Zeit alles ein bischen schief gelaufen so das ich
+endlich mit kwecryptfs angefangen habe. Kein Netz auf Arbeit,
+Beh&#246;rden, ...
+
+------------------------------------------------------------------
+kwecryptfs ist das erste Script wo Variablen f&#252;r die Auswahl der
+Men&#252;punkte in den case Schleifen benutzt wird. Man muss also nur
+noch die locale Dateien bearbeiten.
+
+Weiterhin ist es das erste Script welches die Funktion
+cont_display_col (variable Fensterbreite) voll ausnutzt.
+
+Habe dadurch angefangen alle Scripts durch zu k&#228;mmen und zu &#228;ndern.
+Nicht nur die case Schleifen Variablen sondern auch Fehler finden
+und teilweise schon Code optimieren.
+
+Die Scripte und Funktionen werden trotzdem durch die Localization
+gr&#246;sser.
+
+------------------------------------------------------------------
+kwecryptfs:
+Datei weise Verschl&#252;sselung von Verzeichnissen (gnupgFs).
+Zur Zeit gehen die Optionen openssl* und passphrase*.
+gpg geht laut Hompage noch nicht und pkcs11-helper, tspi habe ich
+noch nicht ausprobiert. Auch unterst&#252;tzt Debian default m&#228;&#223;ig nur
+diese beiden Optionen (selbst kompilieren).
+
+kwnarcconf:
+Es gab noch Funktionen die nicht mehr vorhanden waren. Diese wurden
+gel&#246;scht und auch schon einiges an das ausnutzen von
+der Funktion count_display_col angepasst.
+
+Ich werde auch ne Funktion (Bsp. write_fstab) erstellen die in die
+Scripte kwcryptsetup und kwlosetup einfliessen wird. So kann dadurch
+auch kwlosetup bestehende verschl&#252;sselte Partitionen/Dateien heraus
+finden (read_fstab) und &#228;ndern. Bisher war eine manuelle Eintragung
+n&#246;tig. Ist bisher nur in kwecryptfs vorhanden, aber eben nur f&#252;r
+kwecryptfs (nicht optimal).
+
+In allen Scripts/Funktionen in ./, ./utils, ./graphic und ./multi
+sind durch gearbeitet worden. ./multi muss ich auf Funktion noch
+testen, ansonsten benutzen Sie, so weit es geht, kein &quot;setopt
+shwordsplit&quot; mehr. Einige ben&#246;tigen noch die Variable &quot;IFS&quot;. Das
+lasse ich aber bis zum Schluss oder bleibt. Mal sehen. Zsh und IFS
+ben&#246;tigen shwordsplit oder kl&#228;rt mich auf.
+
+Wichtig ist das alles erstmal optimiert wird und die Localization
+f&#252;r alle Sprachen offen ist egal welcher Zeichensatz. Vorher war ja
+case $var in de_name|eng_name) action ;; esac
+
+Vorerst wird noch nichts ins cvs hochgeladen oder vergleichbares.
+Ich weiss noch nicht wie alle Funktionen aus ./functions/sys/
+reagieren. Also dieses Jahr kommt keine neue Release mehr, das wird
+zuviel Arbeit.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20081210/75104171/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20081210/75104171/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#87">[ date ]</a>
+              <a href="thread.html#87">[ thread ]</a>
+              <a href="subject.html#87">[ subject ]</a>
+              <a href="author.html#87">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Status kommende Release kwtools-0.7.3
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-October/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kommende%20Release%20kwtools-0.7.3&In-Reply-To=%3C20081012211657.GA22620%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000085.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Status kommende Release kwtools-0.7.3</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Status%20kommende%20Release%20kwtools-0.7.3&In-Reply-To=%3C20081012211657.GA22620%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Status kommende Release kwtools-0.7.3">kiste at netzworkk.de
+       </A><BR>
+    <I>Sun Oct 12 23:16:58 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000085.html">[Netzworkk-kwtools] Status kommende Release kwtools-0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#83">[ date ]</a>
+              <a href="thread.html#83">[ thread ]</a>
+              <a href="subject.html#83">[ subject ]</a>
+              <a href="author.html#83">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High Leute,
+
+ich habe in letzter Zeit mich mal wieder ein bischen mehr mit der
+Zsh aus einander gesetzt. Vieles muss ich aus den kwtools noch
+entfernen, wie &quot;setopt shwordsplit&quot;. Das das nicht gerade einfach
+ist wird das ein schleppender Prozess sein. A'la alles kennzeichnen
+mit &quot;unsetopt shwordsplit&quot;. Die Scripte brauchen halt f&#252;r &quot;dialog&quot;
+noch diese Option. Danach mit einem Rutsch alles entfernen.
+
+In allen Scripts wurde der Header verbessert und die meisten haben
+jetzt auch eine &#220;berpr&#252;fung ob wichtige fehlende Programme fehlen.
+Also nicht warten auf die &#220;berpr&#252;fung bei der Ausf&#252;hrung.
+
+Ich mache noch ein paar Tests mit kwpostfix, kwlosetup und
+kwcryptsetup. Ansonsten l&#228;uft bisher alles.
+
+Die html Doku ist aktuell, ohne offizielle Anmerkungen zu Gentoo. Es
+fehlt halt noch der Support f&#252;r einige Scripte, wie kwnetcardconf.
+
+cvs ist aktuell.
+
+------------------------------------------------------------------
+High Alex,
+
+haste Zeit? Ich m&#246;chte die kwtools-0.7.3 fertig stellen und meine
+eig. English &#220;bersetzung ist echt fuzzy.
+
+Melde dich mal bitte!
+
+------------------------------------------------------------------
+
+bisheriger changelog:
+kwtools (0.7.3-1) unstable; urgency=low
+  * kwparted: Status display/Help bug fixed. The calculation of
+    partition size to changed (KByte -&gt; Byte).
+  * kwquota: Support for &quot;JFS&quot; filesystem. Support for warnquota
+    to configure.
+  * only support udev (filesystems).
+  * kwwvdialconf: Support for tel-nr (*99# - Handy data).
+  * to calculate the drive size was bettered.
+  * kwnetcardconf: Support for WLAN Configuration.
+  * Function convert_drive_size: calculation of *Byte bettered.
+  * Function os_check update (Fedora -&gt; fedora, cat /proc/version)
+  * Scripts update to os_check.
+  * new function check_part_fs (filesystemtyp) and convert_si_size
+    (1MByte = 1000.000 Byte).
+  * kwvmstat: new - no part to display - Info message.
+  * kwgrub: delete Bug fixed.
+  * kwnarc: initscript update.
+  * main.cf and functions kwadmin_config - support for color update.
+  * kwrunlevconf: Support for openrc (gentoo).
+  * kwpostfix: *delimiter* to exist are earmarked for dialogbox.
+
+kwtools (0.7.3-1) unstable; urgency=low
+              ^^
+*-1 (s.o.) ist ein muss mittlerweile bei Debian (lintian).
+
+Ich hoffe mal das im November die neue Release draussen ist.
+
+
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20081012/13a084b2/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20081012/13a084b2/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000085.html">[Netzworkk-kwtools] Status kommende Release kwtools-0.7.3
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#83">[ date ]</a>
+              <a href="thread.html#83">[ thread ]</a>
+              <a href="subject.html#83">[ subject ]</a>
+              <a href="author.html#83">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Stand der Dinge
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2007-January/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070131010733.GA11627%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000000.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Stand der Dinge</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20Stand%20der%20Dinge&In-Reply-To=%3C20070131010733.GA11627%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Stand der Dinge">kiste at netzworkk.de
+       </A><BR>
+    <I>Wed Jan 31 02:07:40 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000000.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [28.01.07 12:53]:
+&gt;<i> High Leute,
+</I>&gt;<i> 
+</I>&gt;<i> hurra ich habe wieder Internet:)).
+</I>
+und gleich zu meckern, denn 16000KBit/s habe ich hier nicht:(.
+Jedenfalls noch nicht bemerkt - ist langsamer als bei Hansenet.
+
+&gt;<i> 
+</I>&gt;<i> Habe auch gleich alle Rechner/Distributionen upgedatet/downloaded.
+</I>&gt;<i> CVS ist uptodate.
+</I>
+remotesync* ist nicht mehr vorhanden und wurde durch kwrsync*
+Scripts ersetzt (CVS).
+
+&gt;<i> 
+</I>&gt;<i> Der Stand ist:
+</I>&gt;<i> CentOS-4.4 - geht alles (Fluechtigkeitsfehler ausgemerzt)
+</I>&gt;<i> grml-0.9 - geht alles
+</I>&gt;<i> Debian-4.0 - geht alles
+</I>&gt;<i> OpenSuSe-10.2 - geht bisher alles (fuer *SuSE kwclock verbessert)
+</I>&gt;<i>     parted von *SuSe hat ein Komma Problem (Flag - boot, , , ,....)
+</I>&gt;<i> Fedora-6 - ? (noch garnicht getestet)
+</I>&gt;<i> 
+</I>&gt;<i> In allen Distris wurde nicht das Erstellen von DVD's getestet,
+</I>
+Noch nicht getan.
+
+&gt;<i> ausser nat. auf Debian. Hatte bisher keinen Film und Zeit. Mache ich
+</I>&gt;<i> aber im Zuge von Fedora testen. Desweiteren kann nicht auf allen
+</I>&gt;<i> Distris cryptsetup getestet werden (nicht vorhanden). Dort wird dann
+</I>&gt;<i> alles wie auf Debian behandelt. Nur wens interressiert auf
+</I>&gt;<i> OpenSuSe &gt;=10.1 heisst das Paket util-linux-crypto.
+</I>&gt;<i> 
+</I>&gt;<i> [...]
+</I>&gt;<i> 
+</I>&gt;<i> Es kommt im Script kwrsync_backup zum ersten Mal die Funktion
+</I>&gt;<i> sys_logger zum Einsatz. Sie dient zum loggen von Ereignissen im
+</I>
+Jetzt auch in kwrsync. Und sie wurde fuer die *_cron Scripts nochmal
+ueberschrieben (eval).
+
+&gt;<i> 
+</I>&gt;<i> Wahrscheinlich werde ich am Script film2film noch was aendern, damit
+</I>&gt;<i> man auch ohne Angabe des Video_Import filters Filme umwandeln kann.
+</I>
+Noch nicht getan.
+
+&gt;<i> ...]
+</I>&gt;<i> 
+</I>&gt;<i> Jetzt zum letzten Mal. Wenn Release 0.6.0 draussen ist werde ich
+</I>&gt;<i> die kwtools bei Debian-translation anmelden und nochmal Thomas Haas
+</I>
+Er heisst Christoph Haas o.s.ae.:-)
+
+&gt;<i> 
+</I>&gt;<i> Das Script remotesync wird eh umgeschrieben in kwrsync und wird dann
+</I>&gt;<i> verschiedene Konfigurationen beruecksichtigen. Bisher ging ja nur
+</I>&gt;<i> Home Verzeichniss und ein Verzeichnis synchronisieren und dann auch
+</I>&gt;<i> nur mit einem Remote-Rechner.
+</I>
+remotesync existiert nicht mehr. Es lebe kwrsync:) Kann eigenes Home
+Verzeichnis synchronisieren und verschiedene Verzeichnisse eurer
+Wahl mit verschiedenen Rechnern eurer Wahl (s. man 5 kwrsynctab).
+Auch per &quot;cron&quot;:).
+
+&gt;<i> 
+</I>&gt;<i> -------------------------------------------------------------------
+</I>&gt;<i> Vielleicht fuehre ich in &gt;=0.6.0 ein neues Konzept, fuer das Menue
+</I>&gt;<i> anlegen/aendern/loeschen, ein. Es werden dann je nach Auswahl die
+</I>&gt;<i> Variablen CREATE/CHANGE/DELETE dementsprechend belegt. Es gibt dann
+</I>&gt;<i> ...]
+</I>
+Bin schon am testen. kwrsync nutzt dieses als erstes. Ich werde wohl
+auch noch ne Doku (Policy) schreiben, wie die Funktions Namen bzw.
+die globalen Variablen heissen muessen/sollten. Aber wohl erst nach
+Release 0.6.0.
+
+mfg Kiste
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 189 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070131/29357708/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20070131/29357708/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000000.html">[Netzworkk-kwtools] Stand der Dinge
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#1">[ date ]</a>
+              <a href="thread.html#1">[ thread ]</a>
+              <a href="subject.html#1">[ subject ]</a>
+              <a href="author.html#1">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>

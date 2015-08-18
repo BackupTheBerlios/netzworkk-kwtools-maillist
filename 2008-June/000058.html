@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Netzworkk-kwtools] Tests f&#252;r kwquota
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/netzworkk-kwtools/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20%3D%3Fiso-8859-1%3Fq%3FTests_f%3DFCr_kwquota%3F%3D&In-Reply-To=%3C20080626143611.GA7979%40suffbook.netzworkk.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000057.html">
+   <LINK REL="Next"  HREF="000059.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Netzworkk-kwtools] Tests f&#252;r kwquota</H1>
+    <B>Kai Wilke</B> 
+    <A HREF="mailto:netzworkk-kwtools%40lists.berlios.de?Subject=Re%3A%20%5BNetzworkk-kwtools%5D%20%3D%3Fiso-8859-1%3Fq%3FTests_f%3DFCr_kwquota%3F%3D&In-Reply-To=%3C20080626143611.GA7979%40suffbook.netzworkk.de%3E"
+       TITLE="[Netzworkk-kwtools] Tests f&#252;r kwquota">kiste at netzworkk.de
+       </A><BR>
+    <I>Thu Jun 26 16:36:11 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000057.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+        <LI>Next message: <A HREF="000059.html">[Netzworkk-kwtools] Status kwquota+kwtools-0.7.2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#58">[ date ]</a>
+              <a href="thread.html#58">[ thread ]</a>
+              <a href="subject.html#58">[ subject ]</a>
+              <a href="author.html#58">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>High, high ...
+* Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [25.06.08 13:02]:
+&gt;<i> High, high ...
+</I>&gt;<i> * Kai Wilke &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>&gt; schrieb am [24.06.08 13:40]:
+</I>&gt;<i> &gt; High, high ...
+</I>&gt;<i> &gt; [...]
+</I>&gt;<i> &gt; &gt; &gt; Also auf Debian/i386/unstable (2-3Tage alt) Kernel 2.6.23.9-k7 Vanilla
+</I>&gt;<i> &gt; &gt; &gt; geht nur &quot;quota&quot; mit dem Dateisystem &quot;xfs&quot; korrekt.
+</I>&gt;<i> &gt; &gt; &gt; 
+</I>&gt;<i> &gt; &gt; &gt; Wie schon geschrieben geht unter &quot;ext?&quot; kein Gruppen Quota.
+</I>&gt;<i> 
+</I>&gt;<i> Na ja, jedenfalls habe ich jetzt erstmal alles gecheckt. Vielleicht
+</I>&gt;<i> liegts an quotatool. Bis auf Debian hat dies keine Distri. Also
+</I>&gt;<i> nochmal umschreiben (quotatool -&gt; setquota). Ist schon ein sch&#246;ner
+</I>&gt;<i> Mist:(.
+</I>
+Debian/sid/i386 funzen jetzt ext2/3, reiserfs und xfs. Dank
+setquota. Desweiteren wird jetzt der Status der Laufwerke angezeigt
+(ON, OFF, total OFF (XFS)).
+
+reiser4 ben&#246;tigt einen Patch der in meinem Kernel nicht ist.
+Jedenfalls kann ich noch nicht mal auf dem Laptop ein reiser4 FS
+mounten (Vanilla Kernel +1/2 Patches).
+
+Kernel Doku zu 2.6.23.9 ist auch veraltet, da steht das fuer
+reiserfs bei quota auch noch ein Patch ben&#246;tigt wird, funzt hier
+aber korrekt (?).
+
+Werde jetzt erstmal die anderen Distris testen und dann evtl. mit
+der Konfiguration von Warnungen etc. anfangen.
+
+mfg Kiste
+
+-- 
+#######################################################################
+Netzworkk                   grml - Linux Live CD fuer Sysadmins
+Kai Wilke                   <A HREF="http://grml.org">http://grml.org</A>
+<A HREF="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">kiste at netzworkk.de</A>
+<A HREF="http://www.netzworkk.de">http://www.netzworkk.de</A>
+<A HREF="http://netzworkk.berlios.de">http://netzworkk.berlios.de</A>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 197 bytes
+Desc: Digital signature
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080626/d101b98f/attachment.pgp">https://lists.berlios.de/pipermail/netzworkk-kwtools/attachments/20080626/d101b98f/attachment.pgp</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000057.html">[Netzworkk-kwtools] Tests f&#252;r kwquota
+</A></li>
+	<LI>Next message: <A HREF="000059.html">[Netzworkk-kwtools] Status kwquota+kwtools-0.7.2
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#58">[ date ]</a>
+              <a href="thread.html#58">[ thread ]</a>
+              <a href="subject.html#58">[ subject ]</a>
+              <a href="author.html#58">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/netzworkk-kwtools">More information about the Netzworkk-kwtools
+mailing list</a><br>
+</body></html>
